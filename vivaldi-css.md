@@ -35,5 +35,6 @@ sed -i 's/  <\/head>/\n<link rel="stylesheet" href="style\/isabella.css" \/>\n  
 &#9744; screenshots  
 
 ### Known issues
+- vivaldi's headerbar is faded for some reason - even with no modifications
 - buttons in searchfield and addressfield briefly flash a white border on mouse exit
 - the internal siteinfo button in the addressfield is transitioned inconsistently with the rest of the interface
