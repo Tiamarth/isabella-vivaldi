@@ -5,9 +5,9 @@ Open Vivaldi settings > Themes, click the "+" icon to add a new theme, and enter
 
 | Isabella                                | Isabella Light                          |
 | --------------------------------------- | --------------------------------------- |
-| Background: #333335                     | Background: #f9f9f9                     |
-| Foreground: #d1d1d1                     | Foreground: #4c4f59                     |
-| Highlight: #be4318                      | Highlight: #be4318                      |
-| Accent: #101013                         | Accent: #cccccc                         |
+| Background: `#333335`                   | Background: `#f9f9f9`                   |
+| Foreground: `#d1d1d1`                   | Foreground: `#4c4f59`                   |
+| Highlight: `#be4318`                    | Highlight: `#be4318`                    |
+| Accent: `#101013`                       | Accent: `#cccccc`                       |
 | [&#10004;] Apply Accent Color to Window | [&#10004;] Apply Accent Color to Window |
 | Corner Rounding: Default                | Corner Rounding: Default                |
