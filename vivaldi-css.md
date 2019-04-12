@@ -1,5 +1,4 @@
 # Isabella for Vivaldi custom css
-
 ## Features
 - **improve interface animation transitions** By default Vivaldi's animations throughout its interface are pretty inconsistent, some elements just jerk awkwardly between states because they aren't animated at all. Isabella adds smooth transitions to several elements that previously had none.
 - **buttons in the tab bar are arranged more consistently** By default, Vivaldi places the window buttons in the far top right of the window, but places all the other buttons in the header just above the address bar. Isabella repositions all the buttons at the top of the window so that they're all vertically centered.
@@ -36,5 +35,5 @@ sed -i 's/  <\/head>/\n<link rel="stylesheet" href="style\/isabella.css" \/>\n  
 &#9744; screenshots  
 
 ### Known issues
+- buttons in searchfield and addressfield briefly flash a white border on mouse exit
 - the internal siteinfo button in the addressfield is transitioned inconsistently with the rest of the interface
-- search engine icon in search field briefly flashes a white border when mouse exits it
