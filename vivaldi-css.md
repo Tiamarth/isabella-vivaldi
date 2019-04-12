@@ -12,14 +12,14 @@
 ## Installation (Linux)
 **Vivaldi Stable**
 ```bash
-git clone https://github.com/Tiamarth/Isabella.git && cd Isabella
+git clone https://github.com/Tiamarth/Isabella.git && cd Isabella/vivaldi
 mv isabella.css /opt/vivaldi/resources/vivaldi/style/
 mv isabella /opt/vivaldi/resources/vivaldi/style/
 sed -i 's/  <\/head>/    <link rel="stylesheet" href="style\/isabella.css" \/>\n  <\/head>/' "/opt/vivaldi/resources/vivaldi/browser.html"
 ```
 **Vivaldi Snapshot**
 ```bash
-git clone https://github.com/Tiamarth/Isabella.git && cd Isabella
+git clone https://github.com/Tiamarth/Isabella.git && cd Isabella/vivaldi
 mv isabella.css /opt/vivaldi-snapshot/resources/vivaldi/style/
 mv isabella /opt/vivaldi-snapshot/resources/vivaldi/style/
 sed -i 's/  <\/head>/\n<link rel="stylesheet" href="style\/isabella.css" \/>\n  <\/head>/' "/opt/vivaldi-snapshot/resources/vivaldi/browser.html"
