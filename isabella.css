@@ -8,8 +8,9 @@ body {
     --animatedNot: 0s;
     --animatedUntil: 0s;
     --white: #fff;
-    --black: #000
+    --black: #000;
     --transparent: #00000000;
+    --faviconOpacityHibernated: 0.3;
     --colorTabHoverBg: #54545454;
     --colorTabHoverBgLight: #6f6f6f47;
     --colorIndicatorBg: #d2d2d287;
@@ -19,9 +20,10 @@ body {
     --colorIndicatorHoverBg: var(--colorHighlightBg);
     --colorUrlFocusFg: var(--colorHighlightFg);
     --colorUrlFocusBg: var(--colorHighlightBg);
-    --colorUrlLoadBg: #234f9c;
+    --colorUrlLoadBg: var(--colorHighlightBgDark);
     --urlVignette: inset 0 0 10px #00000026;
-    --colorFaviconBorder: #8080808c;
+    --colorFaviconBorder: #8686868c;
+    --colorFaviconBorderHibernated: #c7c7c782;
     /* values that overwrite vivaldi default values */
     --colorAccentBgDark: var(--transparent) !important;
     background-color: #000 !important;
@@ -55,12 +57,22 @@ body {
 .tabs-at-edge .tab-header {margin-top: initial;}
 /* compensate for dark favicons on flat remix darkest */
 #browser.theme-light.acc-dark.color-behind-tabs-on .favicon,
-#browser.theme-dark .favicon {
+.tab .tab-header .favicon.jstest-favicon-image {
     filter:
       drop-shadow(1px 0 0 var(--colorFaviconBorder))
       drop-shadow(-1px 0 0 var(--colorFaviconBorder))
       drop-shadow(0 1px 0 var(--colorFaviconBorder))
       drop-shadow(0 -1px 0 var(--colorFaviconBorder))
+      !important;
+}
+#browser.theme-light.acc-dark.color-behind-tabs-on .favicon,
+.tab.isdiscarded .tab-header .favicon.jstest-favicon-image {
+    opacity: var(--faviconOpacityHibernated) !important;
+    filter:
+      drop-shadow(1px 0 0 var(--colorFaviconBorderHibernated))
+      drop-shadow(-1px 0 0 var(--colorFaviconBorderHibernated))
+      drop-shadow(0 1px 0 var(--colorFaviconBorderHibernated))
+      drop-shadow(0 -1px 0 var(--colorFaviconBorderHibernated))
       !important;
 }
 /* tab colors */
@@ -77,6 +89,7 @@ body {
 .tab-indicator:hover,#browser.theme-light.acc-light .tab-indicator:hover {background-color: var(--colorIndicatorHoverBg) !important;}
 /* far right tab bar buttons */
 .newtab,.toolbar.toolbar-tabbar.toolbar-noflex.sync-and-trash-container {margin-top: 3px;}
+.toolbar.toolbar-tabbar.toolbar-noflex.sync-and-trash-container {margin-right: 15px;}
 .newtab.button-toolbar button:hover,.synced-tabs-button.button-toolbar button:hover,.toggle-trash.button-toolbar button:hover {
     fill: var(--colorHighlightFg);
     transition: var(--animated);
@@ -85,7 +98,9 @@ body {
 /* ~ window buttons ~ */
 /* better positioning on window buttons */
 /* linux */
-.linux .window-buttongroup {margin: 9px -10px auto auto;}
+.linux .window-buttongroup {margin: 9px -6px auto auto;}
+.linux .window-maximize {margin-right: 5px !important;}
+.linux .window-minimize {margin-right: 5px !important;}
 .linux.tabs-at-edge.maximized .window-buttongroup {margin: 2px -10px auto auto;}
 .linux #browser:not(.tabs-top) .window-buttongroup {margin-top: 4px;}
 .linux #browser:not(.tabs-top).address-off .window-buttongroup,
@@ -166,7 +181,10 @@ body {
     background: var(--colorUrlFocusFg);
 }
 /* load progress indicator */
-.pageload-indicator {background-color: var(--colorUrlLoadBg) !important;}
+.pageload-indicator {
+    background-color: var(--colorUrlLoadBg) !important;
+    border-radius: var(--rounderRadius) !important;
+}
 .pageload.progress-done {display: none;}
 /* url and search buttons */
 .addressfield:focus-within .addressfield-siteinfo.internal .siteinfo-symbol svg,.addressfield:focus-within .addressfield-siteinfo.internal .siteinfo-symbol path {
