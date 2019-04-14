@@ -24,7 +24,6 @@ body {
     --white: #fff;
     --black: #000;
     --transparent: #00000000;
-    --faviconOpacityHibernated: 0.3;
     --colorTabHoverBg: #54545454;
     --colorTabHoverBgLight: #6f6f6f47;
     --colorIndicatorBg: #d2d2d287;
@@ -32,12 +31,14 @@ body {
     --colorIndicatorBgLight: #00000059;
     --colorIndicatorActiveBgLight: #000;
     --colorIndicatorHoverBg: var(--colorHighlightBg);
+    --colorToolbarButtonHover: var(--colorTabHoverBg);
     --colorUrlFocusFg: var(--colorHighlightFg);
     --colorUrlFocusBg: var(--colorHighlightBg);
-    --colorUrlLoadBg: var(--colorHighlightBgDark);
+    --colorUrlLoadBg: var(--colorFgAlpha);
     --urlVignette: inset 0 0 10px #00000026;
     --colorFaviconBorder: #8686868c;
     --colorFaviconBorderHibernated: #c7c7c782;
+    --faviconOpacityHibernated: 0.3;
     /* values that overwrite vivaldi default values */
     --colorAccentBgDark: var(--transparent) !important;
     background-color: #000 !important;
@@ -47,8 +48,8 @@ body {
 #browser.maximized,#browser.fullscreen {padding: var(--windowBorderMaximized);}
 #browser.fullscreen #header {display: var(--fullscreenTitlebar);}
 /* ~ animations ~ */
-.tab-position .tab,.tab-indicator,.addressfield,.searchfield,.addressfield-siteinfo,
-.addressfield-siteinfo.internal svg,.addressfield-siteinfo.internal path,.siteinfo-symbol,.addressfield .button-toolbar button,
+.tab-position .tab,.tab-indicator,.toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-noflex.toolbar-large button,.toolbar-extensions .button-toolbar button,.addressfield,.searchfield,.addressfield-siteinfo,
+.addressfield-siteinfo.internal svg,.addressfield-siteinfo.internal path,.siteinfo-symbol,.addressfield .button-toolbar button,.addressfield .button-toolbar svg path,.searchfield .button-toolbar svg path,
 .newtab.button-toolbar button,.synced-tabs-button.button-toolbar button,.toggle-trash.button-toolbar button,
 .searchfield .button-toolbar button {
     transition: var(--animated);
@@ -114,6 +115,10 @@ body {
 .toolbar-mainbar {height: 32px;}
 .address-top .toolbar-mainbar .button-toolbar {top: -1px;}
 .addressfield,.searchfield {border-radius: var(--rounderRadius) !important;}
+.toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-noflex.toolbar-large button:hover,
+.toolbar-extensions .button-toolbar button:hover {
+    background-color: var(--colorToolbarButtonHover);
+}
 /* url and search colours */
 .addressfield,.searchfield {border-color: transparent !important;}/* ignores local variables */
 /* when focus */
@@ -136,8 +141,7 @@ body {
 /* url and search buttons */
 .addressfield .button-toolbar,.searchfield .button-toolbar {margin-top: 2.5px;}
 .addressfield [title='sensors'] {margin-top: 1.5px;}
-.addressfield:focus-within .addressfield-siteinfo.internal .siteinfo-symbol svg,
-.addressfield:focus-within .addressfield-siteinfo.internal .siteinfo-symbol path {
+.addressfield:focus-within .addressfield-siteinfo.internal .siteinfo-symbol svg path{
     fill: var(--colorUrlFocusFg);
     color: var(--colorUrlFocusFg);
 }
