@@ -4,6 +4,7 @@
 ## Features
 - **improve interface animation transitions** By default Vivaldi's animations throughout its interface are pretty inconsistent, some elements just jerk awkwardly between states because they aren't animated at all. Isabella adds smooth transitions to several elements that previously had none.
 - **buttons in the tab bar are arranged more consistently** By default, Vivaldi places the window buttons in the far top right of the window, but places all the other buttons in the header just above the address bar. Isabella repositions all the buttons at the top of the window so that they're all vertically centered.
+- **force window border around content** Default Vivaldi doesn't have a window border unless you enable native window decorations in the settings, but this makes it occasionally difficult to differentiate the Vivaldi window from other applications when the page content is the same color as background apps. Isabella forces a window border even when native window is disabled.
 - **more clear tab hovered** When you're moving your mouse over the tabs in the tab bar, Isabella emphasizes the tab that's currently being hovered far more clearly than Vivaldi does by default. 
 - **more visible tab stack indicators** Tab stack indicators are easier to see, the topmost tab in a tab stack is easier to distinguish from the others. This is done without requiring more space for the indicators.
 - **no top gradient** By default, Vivaldi draws a gradient behind the tabs if various criteria are met by the currently applied theme. In particular if the accent is dark and applied to the window. Isabella removes the gradient.
@@ -15,7 +16,7 @@ Download the [latest vivaldi zip](https://github.com/Tiamarth/Isabella/releases/
 
 The window button css should be loaded automatically if it exists, so if you want the interface modifications except for the window buttons, just don't copy `isabella-window-buttons.css`. Or if you just want the window buttons and not the rest of the interface modifications, only copy `isabella-window-buttons.css` and reference it instead of `isabella.css` in `browser.html`.
 
-The `<head>` of `browser.html> should look like this after you're done:
+The `<head>` of `browser.html` should look like this after you're done:
 
 ```html
   <head>
