@@ -48,9 +48,13 @@ body {
 #browser.maximized,#browser.fullscreen {padding: var(--windowBorderMaximized);}
 #browser.fullscreen #header {display: var(--fullscreenTitlebar);}
 /* ~ animations ~ */
-.tab-position .tab,.tab-indicator,.toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-noflex.toolbar-large button,.toolbar-extensions .button-toolbar button,.addressfield,.searchfield,.addressfield-siteinfo,
-.addressfield-siteinfo.internal svg,.addressfield-siteinfo.internal path,.siteinfo-symbol,.addressfield .button-toolbar button,.addressfield .button-toolbar svg path,.searchfield .button-toolbar svg path,
-.newtab.button-toolbar button,.synced-tabs-button.button-toolbar button,.toggle-trash.button-toolbar button,
+.tab-position .tab,.tab-indicator,
+.toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-noflex.toolbar-large button,
+.toolbar-extensions .button-toolbar button,.addressfield,.searchfield,.addressfield-siteinfo,
+.addressfield-siteinfo.internal svg,.addressfield-siteinfo.internal path,
+.siteinfo-symbol,.addressfield .button-toolbar button,.addressfield .button-toolbar svg path,
+.searchfield .button-toolbar svg path,.newtab.button-toolbar button,
+.synced-tabs-button.button-toolbar button,.toggle-trash.button-toolbar button,
 .searchfield .button-toolbar button {
     transition: var(--animated);
     transition-delay: var(--animatedUntil);
