@@ -11,7 +11,9 @@
 - **make Vivaldi respect your system theme** Isabella integrates with the Isabella gtk theme by forcing Vivaldi to use those window buttons instead.
 
 ## Installation
-Put `isabella.css` and `isabella-window-buttons.css` in `resources/vivaldi/style` in your Vivaldi install directory, then edit the `<head>` of `browser.html` with a reference to `isabella.css`. The window button css should be loaded automatically if it exists, so if you want the interface modifications except for the window buttons, just don't copy `isabella-window-buttons.css`.
+Put `isabella.css` and `isabella-window-buttons.css` in `resources/vivaldi/style` in your Vivaldi install directory, then edit the `<head>` of `resources/vivaldi/browser.html` with a reference to `isabella.css`.
+
+The window button css should be loaded automatically if it exists, so if you want the interface modifications except for the window buttons, just don't copy `isabella-window-buttons.css`. Or if you just want the window buttons and not the rest of the interface modifications, only copy `isabella-window-buttons.css` and reference it instead of `isabella.css` in `browser.html`.
 
 The `<head>` of `browser.html> should look like this after you're done:
 
@@ -25,6 +27,7 @@ The `<head>` of `browser.html> should look like this after you're done:
 ```
 
 Or, if you're on Linux using the standard install path for Vivaldi, you can just use these commands:
+
 **Vivaldi Stable**
 ```bash
 git clone https://github.com/Tiamarth/Isabella.git && cd Isabella/vivaldi
@@ -48,9 +51,7 @@ sed -i 's/  <\/head>/\n<link rel="stylesheet" href="style\/isabella.css" \/>\n  
 &#9744; status bar  
 &#9744; side and bottom tabs  
 &#9744; settings menu  
-&#9744; color scheme-specific styles  
 &#9744; more animations  
-&#9744; screenshots  
 
 ### Known issues
 - vivaldi's headerbar is faded for some reason - even with no modifications
