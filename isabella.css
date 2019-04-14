@@ -134,26 +134,31 @@ body {
 }
 .pageload.progress-done {display: none;}
 /* url and search buttons */
-.addressfield:focus-within .addressfield-siteinfo.internal .siteinfo-symbol svg,.addressfield:focus-within .addressfield-siteinfo.internal .siteinfo-symbol path {
+.addressfield .button-toolbar,.searchfield .button-toolbar {margin-top: 2.5px;}
+.addressfield [title='sensors'] {margin-top: 1.5px;}
+.addressfield:focus-within .addressfield-siteinfo.internal .siteinfo-symbol svg,
+.addressfield:focus-within .addressfield-siteinfo.internal .siteinfo-symbol path {
     fill: var(--colorUrlFocusFg);
     color: var(--colorUrlFocusFg);
 }
-.addressfield .button-toolbar[title='Edit bookmark'] button,.addressfield .button-toolbar[title='Add Bookmark'] button {
-    border-top-right-radius: var(--rounderRadius) !important;
-    border-bottom-right-radius: var(--rounderRadius) !important;
-}
-.addressfield-siteinfo,.siteinfo-symbol,
-.searchfield .button-toolbar[title='Change search engine'] button {
+.addressfield-siteinfo,.siteinfo-symbol {
     border-top-left-radius: var(--rounderRadius) !important;
     border-bottom-left-radius: var(--rounderRadius) !important;
 }
+.searchfield .button-toolbar .button-pressed,
+.addressfield .button-toolbar .button-pressed {
+    background: var(--colorHighlightBgDark) !important;
+    border-color: var(--colorHighlightBgDark) !important;
+}
+.addressfield .button-toolbar svg path,.searchfield .button-toolbar svg path {fill: var(--colorHighlightBg);}
+.searchfield .button-toolbar:hover svg path,
+.addressfield .button-toolbar:hover svg path,
+.searchfield:focus-within .button-toolbar svg path,
+.addressfield:focus-within .button-toolbar svg path {
+    fill: var(--colorHighlightFg) !important;
+}
+.addressfield .button-toolbar button,.searchfield .button-toolbar button {border-radius: var(--rounderRadius) !important;}
 .addressfield .button-toolbar button:hover,.searchfield .button-toolbar button:hover {
     background-color: var(--colorHighlightBgDark);
     border: var(--transparent) !important;
-}
-.addressfield .button-toolbar[title='Edit bookmark'] .button-pressed,
-.addressfield .button-toolbar[title='Add Bookmark'] .button-pressed,
-.searchfield .button-toolbar .button-pressed {
-    background: var(--colorHighlightBgDark) !important;
-    border-color: var(--colorHighlightBgDark) !important;
 }
