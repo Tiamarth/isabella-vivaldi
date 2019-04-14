@@ -11,7 +11,7 @@
 - **make Vivaldi respect your system theme** Isabella integrates with the Isabella gtk theme by forcing Vivaldi to use those window buttons instead.
 
 ## Installation
-Put `isabella.css` and `isabella-window-buttons.css` in `resources/vivaldi/style` in your Vivaldi install directory, then edit the `<head>` of `resources/vivaldi/browser.html` with a reference to `isabella.css`.
+Download the [latest vivaldi zip](https://github.com/Tiamarth/Isabella/releases/download/04%2F14%2F19/vivaldi.zip) from the [releases tab](https://github.com/Tiamarth/Isabella/releases/) of the repo, and put `isabella.css`, `isabella-window-buttons.css` and the "isabella" folder in `resources/vivaldi/style` in your Vivaldi install directory, then edit the `<head>` of `resources/vivaldi/browser.html` with a reference to `isabella.css`.
 
 The window button css should be loaded automatically if it exists, so if you want the interface modifications except for the window buttons, just don't copy `isabella-window-buttons.css`. Or if you just want the window buttons and not the rest of the interface modifications, only copy `isabella-window-buttons.css` and reference it instead of `isabella.css` in `browser.html`.
 
@@ -44,6 +44,8 @@ mv isabella-window-buttons.css /opt/vivaldi-snapshot/resources/vivaldi/style/
 mv isabella /opt/vivaldi-snapshot/resources/vivaldi/style/
 sed -i 's/  <\/head>/\n<link rel="stylesheet" href="style\/isabella.css" \/>\n  <\/head>/' "/opt/vivaldi-snapshot/resources/vivaldi/browser.html"
 ```
+
+Note that these commands will clone the whole repo onto your system, including the [gtk and gnome-shell theme](https://github.com/Tiamarth/Isabella/tree/master/sublime) and the [Sublime Text color scheme.](https://github.com/Tiamarth/Isabella/tree/master/sublime)
 
 ### Todo
 &#9744; sidebar  
