@@ -1,4 +1,6 @@
 # Isabella for Vivaldi custom css
+![vivaldi screenshot](https://i.imgur.com/ASoZP30.png)
+
 ## Features
 - **improve interface animation transitions** By default Vivaldi's animations throughout its interface are pretty inconsistent, some elements just jerk awkwardly between states because they aren't animated at all. Isabella adds smooth transitions to several elements that previously had none.
 - **buttons in the tab bar are arranged more consistently** By default, Vivaldi places the window buttons in the far top right of the window, but places all the other buttons in the header just above the address bar. Isabella repositions all the buttons at the top of the window so that they're all vertically centered.
@@ -8,11 +10,26 @@
 - **completely adaptable** Don't like the colours Isabella uses? Simply don't use them! If you just want the interface improvements, the css will adapt smoothly into any theme you apply in Vivaldi's settings.
 - **make Vivaldi respect your system theme** Isabella integrates with the Isabella gtk theme by forcing Vivaldi to use those window buttons instead.
 
-## Installation (Linux)
+## Installation
+Put `isabella.css` and `isabella-window-buttons.css` in `resources/vivaldi/style` in your Vivaldi install directory, then edit the `<head>` of `browser.html` with a reference to `isabella.css`. The window button css should be loaded automatically if it exists, so if you want the interface modifications except for the window buttons, just don't copy `isabella-window-buttons.css`.
+
+The `<head>` of `browser.html> should look like this after you're done:
+
+```html
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vivaldi</title>
+    <link rel="stylesheet" href="style/common.css" />
+    <link rel="stylesheet" href="style/isabella.css" />
+  </head>
+```
+
+Or, if you're on Linux using the standard install path for Vivaldi, you can just use these commands:
 **Vivaldi Stable**
 ```bash
 git clone https://github.com/Tiamarth/Isabella.git && cd Isabella/vivaldi
 mv isabella.css /opt/vivaldi/resources/vivaldi/style/
+mv isabella-window-buttons.css /opt/vivaldi/resources/vivaldi/style/
 mv isabella /opt/vivaldi/resources/vivaldi/style/
 sed -i 's/  <\/head>/    <link rel="stylesheet" href="style\/isabella.css" \/>\n  <\/head>/' "/opt/vivaldi/resources/vivaldi/browser.html"
 ```
@@ -20,6 +37,7 @@ sed -i 's/  <\/head>/    <link rel="stylesheet" href="style\/isabella.css" \/>\n
 ```bash
 git clone https://github.com/Tiamarth/Isabella.git && cd Isabella/vivaldi
 mv isabella.css /opt/vivaldi-snapshot/resources/vivaldi/style/
+mv isabella-window-buttons.css /opt/vivaldi-snapshot/resources/vivaldi/style/
 mv isabella /opt/vivaldi-snapshot/resources/vivaldi/style/
 sed -i 's/  <\/head>/\n<link rel="stylesheet" href="style\/isabella.css" \/>\n  <\/head>/' "/opt/vivaldi-snapshot/resources/vivaldi/browser.html"
 ```
