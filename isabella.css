@@ -10,7 +10,8 @@
  * LICENSE: GNU General Public License v3.0 | https://github.com/Tiamarth/Arc-for-Vivaldi/blob/master/LICENSE
  * 
  */
-  @import "isabella-window-buttons.css";/* includes the window button file if it exists */
+/* includes the window button file if it exists */
+@import "isabella-window-buttons.css";
 /* ~ pallete ~ */
 body {
     --windowBorder: 0 1px 1px 1px;
