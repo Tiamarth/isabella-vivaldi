@@ -1,0 +1,68 @@
+/* https://github.com/Tiamarth/Isabella */
+/* ~ window buttons ~ */
+/* better positioning on window buttons */
+/* linux */
+.linux .window-buttongroup {margin: 9px -6px auto auto;}
+.linux .window-maximize {margin-right: 5px !important;}
+.linux .window-minimize {margin-right: 5px !important;}
+.linux.tabs-at-edge.maximized .window-buttongroup {margin: 2px -10px auto auto;}
+.linux #browser:not(.tabs-top) .window-buttongroup {margin-top: 4px;}
+.linux #browser:not(.tabs-top).address-off .window-buttongroup,
+.linux #browser:not(.tabs-top).address-bottom .window-buttongroup {margin-top: -1px;}
+/* remove background on window buttons */
+.window-buttongroup button {
+    width: 30px;
+    background-color: var(--transparent) !important;
+}
+.window-buttongroup button:hover {background-color: var(--transparent) !important;}
+.window-buttongroup button:active {background-color: var(--transparent) !important;}
+.isblurred #browser .window-buttongroup img {opacity: 0.3;}
+/* hide default window buttons svgs */
+.window-buttongroup svg {display: none;}
+/* apply isabella window buttons */
+/* minimize */
+.window-minimize {background: url('isabella/titlebutton-minimize.png') no-repeat;}
+/* maximize */
+.window-maximize {background: url('isabella/titlebutton-maximize.png') no-repeat;}
+/* close */
+.window-close {background: url('isabella/titlebutton-close.png') no-repeat;}
+/* on hover */
+.window-minimize:hover {background: url('isabella/titlebutton-minimize-hover.png') no-repeat !important;}
+.window-maximize:hover {background: url('isabella/titlebutton-maximize-hover.png') no-repeat !important;}
+.window-close:hover {background: url('isabella/titlebutton-close-hover.png') no-repeat !important;}
+/* on hover:active */
+.window-minimize:hover:active {background: url('isabella/titlebutton-minimize-active.png') no-repeat !important;}
+.window-maximize:hover:active {background: url('isabella/titlebutton-maximize-active.png') no-repeat !important;}
+.window-close:hover:active {background: url('isabella/titlebutton-close-active.png') no-repeat !important;}
+/* on dark theme */
+.acc-dark.color-behind-tabs-on .window-minimize,.theme-dark .window-minimize {background: url('isabella/titlebutton-minimize-dark.png') no-repeat;}
+.acc-dark.color-behind-tabs-on .window-maximize,.theme-dark .window-maximize {background: url('isabella/titlebutton-maximize-dark.png') no-repeat;}
+.acc-dark.color-behind-tabs-on .window-close,.theme-dark .window-close {background: url('isabella/titlebutton-close-dark.png') no-repeat;}
+/* on dark theme:hover */
+.acc-dark.color-behind-tabs-on .window-minimize:hover,.theme-dark .window-minimize:hover {background: url('isabella/titlebutton-minimize-hover-dark.png') no-repeat !important;}
+.acc-dark.color-behind-tabs-on .window-maximize:hover,.theme-dark .window-maximize:hover {background: url('isabella/titlebutton-maximize-hover-dark.png') no-repeat !important;}
+.acc-dark.color-behind-tabs-on .window-close:hover,.theme-dark .window-close:hover {background: url('isabella/titlebutton-close-hover-dark.png') no-repeat !important;}
+/* on dark theme:hover:active */
+.acc-dark.color-behind-tabs-on .window-minimize:hover:active,.theme-dark .window-minimize:hover:active {background: url('isabella/titlebutton-minimize-active-dark.png') no-repeat !important;}
+.acc-dark.color-behind-tabs-on .window-maximize:hover:active,.theme-dark .window-maximize:hover:active {background: url('isabella/titlebutton-maximize-active-dark.png') no-repeat !important;}
+.acc-dark.color-behind-tabs-on .window-close:hover:active,.theme-dark .window-close:hover:active {background: url('isabella/titlebutton-close-active-dark.png') no-repeat !important;}
+/* on light theme dark accent behind tabs */
+#browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-minimize {background: url('isabella/titlebutton-minimize.png') no-repeat !important;}
+#browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-maximize {background: url('isabella/titlebutton-maximize.png') no-repeat !important;}
+#browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-close {background: url('isabella/titlebutton-close.png') no-repeat !important;}
+/* on light theme dark accent behind tabs:hover */
+#browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-minimize:hover {background: url('isabella/titlebutton-minimize-hover.png') no-repeat !important;}
+#browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-maximize:hover {background: url('isabella/titlebutton-maximize-hover.png') no-repeat !important;}
+#browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-close:hover {background: url('isabella/titlebutton-close-hover.png') no-repeat !important;}
+/* on light theme dark accent behind tabs:hover:active */
+#browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-minimize:hover:active {background: url('isabella/titlebutton-minimize-active.png') no-repeat !important;}
+#browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-maximize:hover:active {background: url('isabella/titlebutton-maximize-active.png') no-repeat !important;}
+#browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-close:hover:active {background: url('isabella/titlebutton-close-active.png') no-repeat !important;}
+/* on inactive window:base */
+.isblurred .window-minimize {background: url('isabella/titlebutton-minimize-backdrop.png') no-repeat;}
+.isblurred .window-maximize {background: url('isabella/titlebutton-maximize-backdrop.png') no-repeat;}
+.isblurred .window-close {background: url('isabella/titlebutton-close-backdrop.png') no-repeat;}
+/* on inactive window:dark */
+.acc-dark.isblurred .window-minimize,.theme-dark.isblurred .window-minimize {background: url('isabella/titlebutton-minimize-backdrop-dark.png') no-repeat;}
+.acc-dark.isblurred .window-maximize,.theme-dark.isblurred .window-maximize {background: url('isabella/titlebutton-maximize-backdrop-dark.png') no-repeat;}
+.acc-dark.isblurred .window-close,.theme-dark.isblurred .window-close {background: url('isabella/titlebutton-close-backdrop-dark.png') no-repeat;}
