@@ -24,6 +24,7 @@ body {
     --white: #fff;
     --black: #000;
     --transparent: #00000000;
+    --tabHeaderOpacityHibernated: 0.5;
     --colorTabHoverBg: #54545454;
     --colorTabHoverBgLight: #6f6f6f47;
     --colorIndicatorBg: #d2d2d287;
@@ -38,7 +39,6 @@ body {
     --urlVignette: inset 0 0 10px #00000026;
     --colorFaviconBorder: #8686868c;
     --colorFaviconBorderHibernated: #c7c7c782;
-    --faviconOpacityHibernated: 0.3;
     /* values that overwrite vivaldi default values */
     --colorAccentBgDark: var(--transparent) !important;
     background-color: #000 !important;
@@ -75,7 +75,10 @@ body {
 .tabs-at-edge #tabs-container {padding-top: initial !important;}
 .tabs-at-edge .tab-strip {height: initial;}
 .tabs-at-edge .tab-header {margin-top: initial;}
-/* compensate for dark favicons on flat remix darkest */
+/* compensate for dark favicons on dark themes */
+.tab.isdiscarded .tab-header {
+    opacity: var(--tabHeaderOpacityHibernated) !important;
+}
 #browser.theme-light.acc-dark.color-behind-tabs-on .favicon,
 .tab .tab-header .favicon.jstest-favicon-image {
     filter:
@@ -85,9 +88,7 @@ body {
       drop-shadow(0 -1px 0 var(--colorFaviconBorder))
       !important;
 }
-#browser.theme-light.acc-dark.color-behind-tabs-on .favicon,
 .tab.isdiscarded .tab-header .favicon.jstest-favicon-image {
-    opacity: var(--faviconOpacityHibernated) !important;
     filter:
       drop-shadow(1px 0 0 var(--colorFaviconBorderHibernated))
       drop-shadow(-1px 0 0 var(--colorFaviconBorderHibernated))
