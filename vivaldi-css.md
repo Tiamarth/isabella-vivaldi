@@ -57,6 +57,4 @@ Note that these commands will clone the whole repo onto your system, including t
 &#9744; more animations  
 
 ### Known issues
-- vivaldi's headerbar is faded for some reason - even with no modifications
-- buttons in searchfield and addressfield briefly flash a white border on mouse exit
 - the internal siteinfo button in the addressfield is transitioned inconsistently with the rest of the interface
