@@ -9,12 +9,12 @@
 - **more visible tab stack indicators** Tab stack indicators are easier to see, the topmost tab in a tab stack is easier to distinguish from the others. This is done without requiring more space for the indicators.
 - **no top gradient** By default, Vivaldi draws a gradient behind the tabs if various criteria are met by the currently applied theme. In particular if the accent is dark and applied to the window. Isabella removes the gradient.
 - **completely adaptable** Don't like the colours Isabella uses? Simply don't use them! If you just want the interface improvements, the css will adapt smoothly into any theme you apply in Vivaldi's settings.
-- **make Vivaldi respect your system theme** Isabella integrates with the Isabella gtk theme by forcing Vivaldi to use those window buttons instead.
+- **make Vivaldi respect your system theme** Isabella integrates with the Isabella gtk theme, or with Adwaita, by forcing Vivaldi to use those window buttons instead.
 
 ## Installation
 Download the [latest vivaldi zip](https://github.com/Tiamarth/Isabella/releases/download/04%2F14%2F19/vivaldi.zip) from the [releases tab](https://github.com/Tiamarth/Isabella/releases/) of the repo, and put `isabella.css`, `isabella-window-buttons.css` and the "isabella" folder in `resources/vivaldi/style` in your Vivaldi install directory, then edit the `<head>` of `resources/vivaldi/browser.html` with a reference to `isabella.css`.
 
-The window button css should be loaded automatically if it exists, so if you want the interface modifications except for the window buttons, just don't copy `isabella-window-buttons.css`. Or if you just want the window buttons and not the rest of the interface modifications, only copy `isabella-window-buttons.css` and reference it instead of `isabella.css` in `browser.html`.
+The window button css should be loaded automatically if it exists, so if you want the interface modifications except for the window buttons, just don't use either of the button css files. Or if you just want the window buttons and not the rest of the interface modifications, *only* use the button css you want, and reference it instead of `isabella.css` in `browser.html`.
 
 The `<head>` of `browser.html` should look like this after you're done:
 
@@ -33,20 +33,22 @@ Or, if you're on Linux using the standard install path for Vivaldi, you can just
 ```bash
 git clone https://github.com/Tiamarth/Isabella.git && cd Isabella/vivaldi
 mv isabella.css /opt/vivaldi/resources/vivaldi/style/
-mv isabella-window-buttons.css /opt/vivaldi/resources/vivaldi/style/
-mv isabella /opt/vivaldi/resources/vivaldi/style/
+mv window-buttons/isabella-buttons.css /opt/vivaldi/resources/vivaldi/style/
+mv window-buttons/isabella-buttons /opt/vivaldi/resources/vivaldi/style/
 sed -i 's/  <\/head>/    <link rel="stylesheet" href="style\/isabella.css" \/>\n  <\/head>/' "/opt/vivaldi/resources/vivaldi/browser.html"
 ```
 **Vivaldi Snapshot**
 ```bash
 git clone https://github.com/Tiamarth/Isabella.git && cd Isabella/vivaldi
 mv isabella.css /opt/vivaldi-snapshot/resources/vivaldi/style/
-mv isabella-window-buttons.css /opt/vivaldi-snapshot/resources/vivaldi/style/
-mv isabella /opt/vivaldi-snapshot/resources/vivaldi/style/
+mv window-buttons/isabella-buttons.css /opt/vivaldi-snapshot/resources/vivaldi/style/
+mv window-buttons/isabella-buttons /opt/vivaldi-snapshot/resources/vivaldi/style/
 sed -i 's/  <\/head>/\n<link rel="stylesheet" href="style\/isabella.css" \/>\n  <\/head>/' "/opt/vivaldi-snapshot/resources/vivaldi/browser.html"
 ```
 
 Note that these commands will clone the whole repo onto your system, including the [gtk and gnome-shell theme](https://github.com/Tiamarth/Isabella/tree/master/sublime) and the [Sublime Text color scheme.](https://github.com/Tiamarth/Isabella/tree/master/sublime)
+
+Also, you can use the Adwaita window buttons instead if you copy the `adwaita-buttons` folder and `adwaita-buttons.css` instead of the Isabella buttons.
 
 ### Todo
 &#9744; sidebar  

@@ -11,7 +11,8 @@
  * 
  */
 /* includes the window button file if it exists */
-@import "isabella-window-buttons.css";
+@import "window-buttons/isabella-buttons.css";
+@import "window-buttons/adwaita-buttons.css";
 /* ~ pallete ~ */
 body {
     --windowBorder: 1px solid;
@@ -64,7 +65,7 @@ body {
 /* ~ animations ~ */
 /* can't transition vivaldi icon for some reason */
 /* .vivaldi-v svg path, */
-.tab-position .tab,.tab-indicator,.toolbar-mainbar.toolbar-large button,
+.tab-position .tab,.tab-indicator,.toolbar-mainbar.toolbar-large button,.window-buttongroup button,
 .toolbar-extensions .button-toolbar button,.addressfield,.searchfield,.addressfield-siteinfo,
 .addressfield-siteinfo.internal svg,.addressfield-siteinfo.internal path,
 .siteinfo-symbol,.addressfield .button-toolbar button,.addressfield .button-toolbar svg path,
