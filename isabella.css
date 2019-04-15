@@ -14,7 +14,7 @@
 @import "isabella-window-buttons.css";
 /* ~ pallete ~ */
 body {
-    --windowBorder: 0 1px 1px 1px;
+    --windowBorder: 1px solid;
     --windowBorderMaximized: initial;
     --fullscreenTitlebar: none;
     --rounderRadius: 10px;
@@ -26,6 +26,8 @@ body {
     --transparent: #00000000;
     --tabHeaderOpacityHibernated: 0.5;
     --urlVignette: inset 0 0 10px #00000026;
+    --colorWindowBorder: var(--colorBg);
+    --colorWindowBorderAccentBehindTabs: var(--colorAccentBg);
     --colorTabHoverBg: #54545454;
     --colorTabHoverBgLight: #6f6f6f47;
     --colorIndicatorBg: #d2d2d287;
@@ -39,6 +41,7 @@ body {
     --colorUrlLoadBg: var(--colorFgAlpha);
     --colorPanelBg: #151518;
     --colorPanelFg: #d1d1d1;
+    --colorPanelButtonHoverBg: #29292d;
     --colorPanelContentBg: #333335;
     --colorFaviconBorder: #8686868c;
     --colorFaviconBorderHibernated: #c7c7c782;
@@ -46,7 +49,12 @@ body {
     background-color: #000 !important;
 }
 /* ~ window border and titlebar ~ */
-#browser {padding: var(--windowBorder);}
+#browser {
+    border: var(--windowBorder);
+    border-top: 0;
+    border-color: var(--colorWindowBorder);
+}
+#browser.color-behind-tabs-on {border-color: var(--colorWindowBorderAccentBehindTabs);}
 #browser.maximized,#browser.fullscreen {padding: var(--windowBorderMaximized);}
 #browser.fullscreen #header {display: var(--fullscreenTitlebar);}
 .tabs-top:not(.mac).color-behind-tabs-on #tabs-container,
@@ -62,7 +70,7 @@ body {
 .siteinfo-symbol,.addressfield .button-toolbar button,.addressfield .button-toolbar svg path,
 .searchfield .button-toolbar svg path,.newtab.button-toolbar button,
 .synced-tabs-button.button-toolbar button,.toggle-trash.button-toolbar button,
-.searchfield .button-toolbar button {
+.searchfield .button-toolbar button,#switch button {
     transition: var(--animated);
     transition-delay: var(--animatedUntil);
 }
@@ -179,3 +187,8 @@ body {
     color: var(--colorHighlightFg) !important;
     background-color: var(--colorHighlightBg) !important;
 }
+/* panel */
+#switch {background-color: var(--colorPanelBg);}
+#switch button svg path {fill: var(--colorPanelFg);}
+#switch button.active svg path {fill: inherit;}
+#switch button:not(.active):hover {background-color: var(--colorPanelButtonHoverBg) !important;}
