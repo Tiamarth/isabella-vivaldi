@@ -48,8 +48,9 @@ body {
 #browser.maximized,#browser.fullscreen {padding: var(--windowBorderMaximized);}
 #browser.fullscreen #header {display: var(--fullscreenTitlebar);}
 /* ~ animations ~ */
-.tab-position .tab,.tab-indicator,
-.toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-noflex.toolbar-large button,
+/* can't transition vivaldi icon for some reason */
+/* .vivaldi-v svg path, */
+.tab-position .tab,.tab-indicator,.toolbar-mainbar.toolbar-large button,
 .toolbar-extensions .button-toolbar button,.addressfield,.searchfield,.addressfield-siteinfo,
 .addressfield-siteinfo.internal svg,.addressfield-siteinfo.internal path,
 .siteinfo-symbol,.addressfield .button-toolbar button,.addressfield .button-toolbar svg path,
@@ -64,7 +65,7 @@ body {
 /* ~ tabs ~ */
 /* adjust spacing to better resemble epiphany */
 #header {height: 42px;}
-.vivaldi {margin-top: 3px;}
+.vivaldi-v {margin-top: 5px;}
 #tabs-container {padding-top: 5px !important;}
 .tab-strip {height: 37px;}
 .tab-header {margin-top: 3px;}
@@ -119,10 +120,7 @@ body {
 .toolbar-mainbar {height: 32px;}
 .address-top .toolbar-mainbar .button-toolbar {top: -1px;}
 .addressfield,.searchfield {border-radius: var(--rounderRadius) !important;}
-.toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-noflex.toolbar-large button:hover,
-.toolbar-extensions .button-toolbar button:hover {
-    background-color: var(--colorToolbarButtonHover);
-}
+.toolbar-mainbar.toolbar-large button:hover,.toolbar-extensions .button-toolbar button:hover {background-color: var(--colorToolbarButtonHover);}
 /* url and search colours */
 .addressfield,.searchfield {border-color: transparent !important;}/* ignores local variables */
 /* when focus */
@@ -158,13 +156,9 @@ body {
     background: var(--colorHighlightBgDark) !important;
     border-color: var(--colorHighlightBgDark) !important;
 }
-.addressfield .button-toolbar svg path,.searchfield .button-toolbar svg path {fill: var(--colorHighlightBg);}
+.addressfield .button-toolbar .button-on svg path {fill: var(--colorHighlightBg);}
 .searchfield .button-toolbar:hover svg path,
-.addressfield .button-toolbar:hover svg path,
-.searchfield:focus-within .button-toolbar svg path,
-.addressfield:focus-within .button-toolbar svg path {
-    fill: var(--colorHighlightFg) !important;
-}
+.addressfield .button-toolbar .button-on:hover svg path {fill: var(--colorHighlightFg) !important;}
 .addressfield .button-toolbar button,.searchfield .button-toolbar button {border-radius: var(--rounderRadius) !important;}
 .addressfield .button-toolbar button:hover,.searchfield .button-toolbar button:hover {
     background-color: var(--colorHighlightBgDark);
