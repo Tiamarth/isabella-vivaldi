@@ -71,7 +71,7 @@ body {
 .siteinfo-symbol,.addressfield .button-toolbar button,.addressfield .button-toolbar svg path,
 .searchfield .button-toolbar svg path,.newtab.button-toolbar button,
 .synced-tabs-button.button-toolbar button,.toggle-trash.button-toolbar button,
-.searchfield .button-toolbar button,#switch button {
+.searchfield .button-toolbar button,.startpage .startpage-folder-navigation button,#switch button {
     transition: var(--animated);
     transition-delay: var(--animatedUntil);
 }
@@ -188,6 +188,24 @@ body {
     color: var(--colorHighlightFg) !important;
     background-color: var(--colorHighlightBg) !important;
 }
+/* speed dial */
+/* navigation */
+.startpage-navigation {min-height: 0 !important;}
+.active.button-startpage {background-color: var(--colorHighlightBg);}
+/* thumbs */
+.speeddial {margin-top: 20px;}
+/* back button */
+.startpage .startpage-folder-navigation button,
+.startpage .startpage-folder-navigation button:hover {
+    color: var(--colorHighlightFg);
+    background-color: var(--colorHighlightBg);
+}
+button.button-startpage:after {display: none;}
+.startpage .startpage-folder-navigation button:hover {filter: brightness(150%);}
+/* bookmarks with no thumbnail */
+.startpage-content .thumbnail .thumbnail-image {background-image: linear-gradient(125deg, var(--colorHighlightBgDark) 0%, var(--colorHighlightBgDark) 80%);}
+.cb-image svg .bookmark-shadow, .thumbnail-image svg .bookmark-shadow {display: none;}
+.cb-image svg .bookmark-shape, .thumbnail-image svg .bookmark-shape,#sd-bookmark {fill: var(--colorHighlightFg);}
 /* panel */
 #switch {background-color: var(--colorPanelBg);}
 #switch button svg path {fill: var(--colorPanelFg);}
