@@ -14,7 +14,7 @@
 - **more frequent use of highlight** Default Vivaldi barely uses your highlight color. Isabella uses it in various more places, especially on buttons and links.
 
 ## Installation
-Download the [latest vivaldi zip](https://github.com/Tiamarth/Isabella/releases/download/04%2F14%2F19/vivaldi.zip) from the [releases tab](https://github.com/Tiamarth/Isabella/releases/) of the repo, and put `isabella.css`, `isabella-window-buttons.css` and the "isabella" folder in `resources/vivaldi/style` in your Vivaldi install directory, then edit the `<head>` of `resources/vivaldi/browser.html` with a reference to `isabella.css`.
+Put `isabella.css`, `isabella-window-buttons.css` and the "isabella" folder in `resources/vivaldi/style` in your Vivaldi install directory, then edit the `<head>` of `resources/vivaldi/browser.html` with a reference to `isabella.css`.
 
 The window button css should be loaded automatically if it exists, so if you want the interface modifications except for the window buttons, just don't use either of the button css files. Or if you just want the window buttons and not the rest of the interface modifications, *only* use the button css you want, and reference it instead of `isabella.css` in `browser.html`.
 
@@ -33,7 +33,7 @@ Or, if you're on Linux using the standard install path for Vivaldi, you can just
 
 **Vivaldi Stable**
 ```bash
-git clone https://github.com/Tiamarth/Isabella.git && cd Isabella/vivaldi
+git clone https://github.com/Tiamarth/isabella-vivaldi.git && cd isabella-vivaldi
 mv isabella.css /opt/vivaldi/resources/vivaldi/style/
 mv window-buttons/isabella-buttons.css /opt/vivaldi/resources/vivaldi/style/
 mv window-buttons/isabella-buttons /opt/vivaldi/resources/vivaldi/style/
@@ -41,14 +41,12 @@ sed -i 's/  <\/head>/    <link rel="stylesheet" href="style\/isabella.css" \/>\n
 ```
 **Vivaldi Snapshot**
 ```bash
-git clone https://github.com/Tiamarth/Isabella.git && cd Isabella/vivaldi
+git clone https://github.com/Tiamarth/isabella-vivaldi.git && cd isabella-vivaldi
 mv isabella.css /opt/vivaldi-snapshot/resources/vivaldi/style/
 mv window-buttons/isabella-buttons.css /opt/vivaldi-snapshot/resources/vivaldi/style/
 mv window-buttons/isabella-buttons /opt/vivaldi-snapshot/resources/vivaldi/style/
 sed -i 's/  <\/head>/\n<link rel="stylesheet" href="style\/isabella.css" \/>\n  <\/head>/' "/opt/vivaldi-snapshot/resources/vivaldi/browser.html"
 ```
-
-Note that these commands will clone the whole repo onto your system, including the [gtk and gnome-shell theme](https://github.com/Tiamarth/Isabella/tree/master/sublime) and the [Sublime Text color scheme.](https://github.com/Tiamarth/Isabella/tree/master/sublime)
 
 Also, you can use the Adwaita window buttons instead if you copy the `adwaita-buttons` folder and `adwaita-buttons.css` instead of the Isabella buttons.
 
