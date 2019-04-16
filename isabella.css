@@ -40,8 +40,8 @@ body {
     --colorUrlFocusFg: var(--colorHighlightFg);
     --colorUrlFocusBg: var(--colorHighlightBg);
     --colorUrlLoadBg: var(--colorFgAlpha);
-    --colorPanelBg: #151518;
-    --colorPanelFg: #d1d1d1;
+    --colorPanelBg: var(--colorAccentBgDark);
+    --colorPanelFg: var(--colorAccentFg);
     --colorPanelButtonHoverBg: #29292d;
     --colorPanelContentBg: #333335;
     --colorFaviconBorder: #8686868c;
@@ -71,8 +71,8 @@ body {
 .siteinfo-symbol,.addressfield .button-toolbar button,.addressfield .button-toolbar svg path,
 .searchfield .button-toolbar svg path,.newtab.button-toolbar button,
 .synced-tabs-button.button-toolbar button,.toggle-trash.button-toolbar button,
-.searchfield .button-toolbar button,.startpage .startpage-folder-navigation button,.dial button.button-title,.dial,
-#switch button {
+.searchfield .button-toolbar button,.startpage .startpage-folder-navigation button,
+.dial button.button-title,#switch button,.panel-group input {
     transition: var(--animated) !important;
     transition-delay: var(--animatedUntil) !important;
 }
@@ -200,13 +200,7 @@ body {
 }
 /* thumbs */
 .speeddial {margin-top: 20px;}
-.startpage-content button.button-title {
-    margin-top: -15px;
-    border-radius: 0 !important;
-    border-bottom-right-radius: var(--rounderRadius) !important;
-    border-bottom-left-radius: var(--rounderRadius) !important;
-}
-.dial:hover button.button-title {margin-top: -11px !important;}
+.startpage-content button.button-title {box-shadow: 0 2px 2px #292929b3 !important;}
 .startpage-content button.button-title {
     color: var(--colorHighlightFg) !important;
     background-color: var(--colorHighlightBg) !important;
@@ -214,14 +208,13 @@ body {
 /* back button */
 .startpage .startpage-folder-navigation button,
 .startpage .startpage-folder-navigation button:hover {
-    margin-top: -25px;
     color: var(--colorHighlightFg);
     background-color: var(--colorHighlightBg);
 }
 button.button-startpage:after {display: none;}
 .startpage .startpage-folder-navigation button:hover {filter: brightness(150%);}
 /* bookmarks with no thumbnail */
-.startpage-content .thumbnail .thumbnail-image {background-image: linear-gradient(125deg, var(--colorHighlightBgDark) 0%, var(--colorHighlightBgDark) 80%);}
+.startpage-content .thumbnail .thumbnail-image {background-image: linear-gradient(125deg, var(--colorHighlightBgAlpha) 0%, var(--colorHighlightBgAlpha) 80%);}
 .cb-image svg .bookmark-shadow, .thumbnail-image svg .bookmark-shadow {display: none;}
 .cb-image svg .bookmark-shape, .thumbnail-image svg .bookmark-shape,#sd-bookmark {fill: var(--colorHighlightFg);}
 /* panel */
@@ -229,3 +222,9 @@ button.button-startpage:after {display: none;}
 #switch button svg path {fill: var(--colorPanelFg);}
 #switch button.active svg path {fill: inherit;}
 #switch button:not(.active):hover {background-color: var(--colorPanelButtonHoverBg) !important;}
+/* panel content */
+.panel-group input:focus-within {
+    color: var(--colorHighlightFg);
+    background-color: var(--colorHighlightBg);
+}
+.theme-dark .tree-row .audioicon {filter: invert(1);}
