@@ -71,9 +71,10 @@ body {
 .siteinfo-symbol,.addressfield .button-toolbar button,.addressfield .button-toolbar svg path,
 .searchfield .button-toolbar svg path,.newtab.button-toolbar button,
 .synced-tabs-button.button-toolbar button,.toggle-trash.button-toolbar button,
-.searchfield .button-toolbar button,.startpage .startpage-folder-navigation button,#switch button {
-    transition: var(--animated);
-    transition-delay: var(--animatedUntil);
+.searchfield .button-toolbar button,.startpage .startpage-folder-navigation button,.dial button.button-title,.dial,
+#switch button {
+    transition: var(--animated) !important;
+    transition-delay: var(--animatedUntil) !important;
 }
 /* don't animate if user disables in settings */
 #browser.animation-off {transition: var(--animatedNot);}
@@ -114,6 +115,8 @@ body {
 /* tab colors */
 .tab:not(.active):hover {background: var(--colorTabHoverBg) !important;}
 .theme-light .tab:not(.active):hover {background: var(--colorTabHoverBgLight) !important;}
+#tabs-container .tab.tab-small.audio-on .tab-audio {background-color: var(--colorHighlightBg);}
+.tab-small .audioicon {filter: invert(1);}
 /* stacks */
 .tab-indicator {border-bottom: 1px solid var(--transparent) !important;}
 .tab-indicator {background-color: var(--colorIndicatorBg) !important;}
@@ -191,12 +194,27 @@ body {
 /* speed dial */
 /* navigation */
 .startpage-navigation {min-height: 0 !important;}
-.active.button-startpage {background-color: var(--colorHighlightBg);}
+.active.button-startpage {
+    color: var(--colorHighlightFg) !important;
+    background-color: var(--colorHighlightBg);
+}
 /* thumbs */
 .speeddial {margin-top: 20px;}
+.startpage-content button.button-title {
+    margin-top: -15px;
+    border-radius: 0 !important;
+    border-bottom-right-radius: var(--rounderRadius) !important;
+    border-bottom-left-radius: var(--rounderRadius) !important;
+}
+.dial:hover button.button-title {margin-top: -11px !important;}
+.startpage-content button.button-title {
+    color: var(--colorHighlightFg) !important;
+    background-color: var(--colorHighlightBg) !important;
+}
 /* back button */
 .startpage .startpage-folder-navigation button,
 .startpage .startpage-folder-navigation button:hover {
+    margin-top: -25px;
     color: var(--colorHighlightFg);
     background-color: var(--colorHighlightBg);
 }
