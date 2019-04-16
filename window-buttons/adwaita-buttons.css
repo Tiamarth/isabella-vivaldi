@@ -13,7 +13,7 @@
 .linux #browser:not(.tabs-top).address-off .window-buttongroup,
 .linux #browser:not(.tabs-top).address-bottom .window-buttongroup {margin-top: -1px !important;}
 /* remove background on window buttons */
-#browser .window-buttongroup button {
+#browser .window-buttongroup button,#browser.maximized .window-buttongroup button {
     height: 30px !important;
     background-color: transparent !important;
     background-position: center !important;
@@ -63,3 +63,5 @@
 #browser:not(.tabs-top).acc-dark.color-behind-tabs-on .window-close:hover:active {
     background: url('adwaita-buttons/window-close.png') no-repeat !important;
 }
+/* when window is maximized, display unmaximize button */
+#browser.maximized .window-maximize {background: url(adwaita-buttons/window-restore.png) no-repeat !important;}
