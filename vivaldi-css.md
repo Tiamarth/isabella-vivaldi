@@ -10,6 +10,8 @@
 - **no top gradient** By default, Vivaldi draws a gradient behind the tabs if various criteria are met by the currently applied theme. In particular if the accent is dark and applied to the window. Isabella removes the gradient.
 - **completely adaptable** Don't like the colours Isabella uses? Simply don't use them! If you just want the interface improvements, the css will adapt smoothly into any theme you apply in Vivaldi's settings.
 - **make Vivaldi respect your system theme** Isabella integrates with the Isabella gtk theme, or with Adwaita, by forcing Vivaldi to use those window buttons instead.
+- **no addressfield overlay** Default Vivaldi contains an element in the addressfield (where the url goes) that overlays everything in the input area. This results in an inconsistent color display in the addressfield, as the overlay is an entirely different color and just slightly transparent. Isabella removes the overlay entirely, so that the color isn't changed.
+- **more frequent use of highlight** Default Vivaldi barely uses your highlight color. Isabella uses it in various more places, especially on buttons and links.
 
 ## Installation
 Download the [latest vivaldi zip](https://github.com/Tiamarth/Isabella/releases/download/04%2F14%2F19/vivaldi.zip) from the [releases tab](https://github.com/Tiamarth/Isabella/releases/) of the repo, and put `isabella.css`, `isabella-window-buttons.css` and the "isabella" folder in `resources/vivaldi/style` in your Vivaldi install directory, then edit the `<head>` of `resources/vivaldi/browser.html` with a reference to `isabella.css`.
