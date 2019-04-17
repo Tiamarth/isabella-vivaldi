@@ -11,3 +11,8 @@ Open Vivaldi settings > Themes, click the "+" icon to add a new theme, and enter
 | Accent: `#101013`                       | Accent: `#cccccc`                       |
 | [&#10004;] Apply Accent Color to Window | [&#10004;] Apply Accent Color to Window |
 | Corner Rounding: Default                | Corner Rounding: Default                |
+
+**Need more help?** Get in touch!
+- join my [Discord server](https://discord.gg/ZfDP2ZV)
+- [Create an issue here on Github](https://github.com/Tiamarth/isabella-vivaldi/issues/new)
+- [Email me](mailto:jontiamac@gmail.com)
