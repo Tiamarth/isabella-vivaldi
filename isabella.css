@@ -65,14 +65,7 @@ body {
 /* ~ animations ~ */
 /* can't transition vivaldi icon for some reason */
 /* .vivaldi-v svg path, */
-.tab-position .tab,.tab-indicator,.toolbar-mainbar.toolbar-large button,.window-buttongroup button,
-.toolbar-extensions .button-toolbar button,.addressfield,.searchfield,.addressfield-siteinfo,
-.addressfield-siteinfo.internal svg,.addressfield-siteinfo.internal path,
-.siteinfo-symbol,.addressfield .button-toolbar button,.addressfield .button-toolbar svg path,
-.searchfield .button-toolbar svg path,.newtab.button-toolbar button,
-.synced-tabs-button.button-toolbar button,.toggle-trash.button-toolbar button,
-.searchfield .button-toolbar button,.startpage .startpage-folder-navigation button,
-.dial button.button-title,#switch button,.panel-group input {
+button,input,svg,path,.tab,.addressfield,.searchfield,.status-info {
     transition: var(--animated) !important;
     transition-delay: var(--animatedUntil) !important;
 }
@@ -191,6 +184,13 @@ body {
     color: var(--colorHighlightFg) !important;
     background-color: var(--colorHighlightBg) !important;
 }
+/* finder */
+.find-in-page {justify-content: initial;}
+.fip-input-label {display: none;}
+.find-in-page .fip-input-container input:focus-within {
+    color: var(--colorHighlightFg);
+    background-color: var(--colorHighlightBg);
+}
 /* speed dial */
 /* navigation */
 .startpage-navigation {min-height: 0 !important;}
@@ -228,3 +228,10 @@ button.button-startpage:after {display: none;}
     background-color: var(--colorHighlightBg);
 }
 .theme-dark .tree-row .audioicon {filter: invert(1);}
+/* status overlay */
+.status-info {
+    color: var(--colorHighlightFg) !important;
+    background: var(--colorHighlightBg) !important;
+    border: 0 !important;
+    box-shadow: 0 0 3px #000000ab;
+}
