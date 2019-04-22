@@ -43,6 +43,7 @@ body {
     --colorPanelBg: var(--colorAccentBgDark);
     --colorPanelFg: var(--colorAccentFg);
     --colorPanelButtonHoverBg: #29292d;
+    --colorPanelButtonHoverBgLight: #f0f0f0c7;
     --colorPanelContentBg: #333335;
     --colorFaviconBorder: #8686868c;
     --colorFaviconBorderHibernated: #c7c7c782;
@@ -221,7 +222,11 @@ button.button-startpage:after {display: none;}
 #switch {background-color: var(--colorPanelBg);}
 #switch button svg path {fill: var(--colorPanelFg);}
 #switch button.active svg path {fill: inherit;}
-#switch button:not(.active):hover {background-color: var(--colorPanelButtonHoverBg) !important;}
+#switch button:not(.active):hover {background-color: var(--colorPanelButtonHoverBgLight);}
+.theme-dark #switch button:not(.active):hover,
+.theme-light.acc-dark.color-behind-tabs-on #switch button:not(.active):hover {
+    background-color: var(--colorPanelButtonHoverBg) !important;
+}
 /* panel content */
 .panel-group input:focus-within {
     color: var(--colorHighlightFg);
