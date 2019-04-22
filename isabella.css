@@ -66,7 +66,7 @@ body {
 /* ~ animations ~ */
 /* can't transition vivaldi icon for some reason */
 /* .vivaldi-v svg path, */
-button,input,svg,path,.tab,.addressfield,.searchfield,.status-info {
+button,input,textarea,svg,path,.tab,.addressfield,.searchfield,.status-info {
     transition: var(--animated) !important;
     transition-delay: var(--animatedUntil) !important;
 }
@@ -220,7 +220,7 @@ button.button-startpage:after {display: none;}
 .cb-image svg .bookmark-shape, .thumbnail-image svg .bookmark-shape,#sd-bookmark {fill: var(--colorHighlightFg);}
 /* panel */
 #switch {background-color: var(--colorPanelBg);}
-#switch button svg path {fill: var(--colorPanelFg);}
+#switch button svg path,#switch button svg rect {fill: var(--colorPanelFg);}
 #switch button.active svg path {fill: inherit;}
 #switch button:not(.active):hover {background-color: var(--colorPanelButtonHoverBgLight);}
 .theme-dark #switch button:not(.active):hover,
@@ -228,10 +228,14 @@ button.button-startpage:after {display: none;}
     background-color: var(--colorPanelButtonHoverBg) !important;
 }
 /* panel content */
-.panel-group input:focus-within {
+.panel-group input:focus-within,
+.panel-group textarea:focus-within,
+.panel-group textarea.note.editor:focus-within,
+.panel-group input:focus-within:hover {
     color: var(--colorHighlightFg);
-    background-color: var(--colorHighlightBg);
+    background-color: var(--colorHighlightBg) !important;
 }
+.speeddial-bookmarksbar input:focus-within,.speeddial-bookmarksbar input:focus-within:hover {background-color: var(--colorBg);}
 .theme-dark .tree-row .audioicon {filter: invert(1);}
 /* status overlay */
 .status-info {
