@@ -33,7 +33,7 @@ Or, if you're on Linux using the standard install path for Vivaldi, you can just
 
 **Vivaldi Stable**
 ```bash
-git clone https://github.com/Tiamarth/isabella-vivaldi.git && cd isabella-vivaldi
+git clone https://github.com/isabella-theme/isabella-vivaldi.git && cd isabella-vivaldi
 mv isabella.css /opt/vivaldi/resources/vivaldi/style/
 mv window-buttons/isabella-buttons.css /opt/vivaldi/resources/vivaldi/style/
 mv window-buttons/isabella-buttons /opt/vivaldi/resources/vivaldi/style/
@@ -41,7 +41,7 @@ sed -i 's/  <\/head>/    <link rel="stylesheet" href="style\/isabella.css" \/>\n
 ```
 **Vivaldi Snapshot**
 ```bash
-git clone https://github.com/Tiamarth/isabella-vivaldi.git && cd isabella-vivaldi
+git clone https://github.com/isabella-theme/isabella-vivaldi.git && cd isabella-vivaldi
 mv isabella.css /opt/vivaldi-snapshot/resources/vivaldi/style/
 mv window-buttons/isabella-buttons.css /opt/vivaldi-snapshot/resources/vivaldi/style/
 mv window-buttons/isabella-buttons /opt/vivaldi-snapshot/resources/vivaldi/style/
