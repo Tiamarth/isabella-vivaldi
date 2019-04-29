@@ -12,7 +12,7 @@
  */
 /* includes the window button file if it exists */
 @import "window-buttons/isabella-buttons.css";
-@import "window-buttons/adwaita-buttons.css";
+/*@import "window-buttons/adwaita-buttons.css";*/
 /* ~ pallete ~ */
 body {
     --windowBorder: 1px solid;
