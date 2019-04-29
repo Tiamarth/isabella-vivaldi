@@ -185,6 +185,10 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,.status-info {
     color: var(--colorHighlightFg) !important;
     background-color: var(--colorHighlightBg) !important;
 }
+/* bookmark bar */
+.bookmark-bar-top .toolbar-mainbar:after {display: none;}
+.bookmark-bar,.bookmark-bar .observer button {background-color: var(--colorAccentBg);}
+.color-behind-tabs-on .bookmark-bar,.color-behind-tabs-on .bookmark-bar .observer button {background-color: var(--colorBg);}
 /* finder */
 .find-in-page {justify-content: initial;}
 .fip-input-label {display: none;}
