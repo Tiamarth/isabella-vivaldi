@@ -56,7 +56,9 @@ body {
     border-top: 0;
     border-color: var(--colorWindowBorder);
 }
-#browser.color-behind-tabs-on {border-color: var(--colorWindowBorderAccentBehindTabs);}
+#browser.color-behind-tabs-on {
+    border-color: var(--colorWindowBorderAccentBehindTabs);
+}
 #browser.maximized,#browser.fullscreen {padding: var(--windowBorderMaximized);}
 #browser.fullscreen #header {display: var(--fullscreenTitlebar);}
 .tabs-top:not(.mac).color-behind-tabs-on #tabs-container,
@@ -108,22 +110,44 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,.status-info {
 }
 /* tab colors */
 .tab:not(.active):hover {background: var(--colorTabHoverBg) !important;}
-.theme-light .tab:not(.active):hover {background: var(--colorTabHoverBgLight) !important;}
-#tabs-container .tab.tab-small.audio-on .tab-audio {background-color: var(--colorHighlightBg);}
+.theme-light .tab:not(.active):hover {
+    background: var(--colorTabHoverBgLight) !important;
+}
+#tabs-container .tab.tab-small.audio-on .tab-audio {
+    background-color: var(--colorHighlightBg);
+}
 .tab-small .audioicon {filter: invert(1);}
 /* stacks */
 .tab-indicator {border-bottom: 1px solid var(--transparent) !important;}
 .tab-indicator {background-color: var(--colorIndicatorBg) !important;}
-.tab-indicator.active {background-color: var(--colorIndicatorActiveBg) !important;}
-#browser.theme-light .tab-indicator {background-color: var(--colorIndicatorBgLight) !important;}
-#browser.theme-light .tab-indicator.active {background-color: var(--colorIndicatorActiveBgLight) !important;}
-#browser.theme-light.acc-dark.color-behind-tabs-on .tab-indicator {background-color: var(--colorIndicatorBg) !important;}
-#browser.theme-light.acc-dark.color-behind-tabs-on .tab-indicator.active {background-color: var(--colorIndicatorActiveBg) !important;}
-.tab-indicator:hover,#browser.theme-light.acc-light .tab-indicator:hover {background-color: var(--colorIndicatorHoverBg) !important;}
+.tab-indicator.active {
+    background-color: var(--colorIndicatorActiveBg) !important;
+}
+#browser.theme-light .tab-indicator {
+    background-color: var(--colorIndicatorBgLight) !important;
+}
+#browser.theme-light .tab-indicator.active {
+    background-color: var(--colorIndicatorActiveBgLight) !important;
+}
+#browser.theme-light.acc-dark.color-behind-tabs-on .tab-indicator {
+    background-color: var(--colorIndicatorBg) !important;
+}
+#browser.theme-light.acc-dark.color-behind-tabs-on .tab-indicator.active {
+    background-color: var(--colorIndicatorActiveBg) !important;
+}
+.tab-indicator:hover,#browser.theme-light.acc-light .tab-indicator:hover {
+    background-color: var(--colorIndicatorHoverBg) !important;
+}
 /* far right tab bar buttons */
-.newtab,.toolbar.toolbar-tabbar.toolbar-noflex.sync-and-trash-container {margin-top: 3px;}
-.toolbar.toolbar-tabbar.toolbar-noflex.sync-and-trash-container {margin-right: 15px;}
-.newtab.button-toolbar button:hover,.synced-tabs-button.button-toolbar button:hover,.toggle-trash.button-toolbar button:hover {
+.newtab,.toolbar.toolbar-tabbar.toolbar-noflex.sync-and-trash-container {
+    margin-top: 3px;
+}
+.toolbar.toolbar-tabbar.toolbar-noflex.sync-and-trash-container {
+    margin-right: 15px;
+}
+.newtab.button-toolbar button:hover,
+.synced-tabs-button.button-toolbar button:hover,
+.toggle-trash.button-toolbar button:hover {
     fill: var(--colorHighlightFg);
     transition: var(--animated);
     transition-delay: var(--animatedUntil);
@@ -133,16 +157,24 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,.status-info {
 .toolbar-mainbar {height: 32px;}
 .address-top .toolbar-mainbar .button-toolbar {top: -1px;}
 .addressfield,.searchfield {border-radius: var(--rounderRadius) !important;}
-.toolbar-mainbar.toolbar-large button:hover,.toolbar-extensions .button-toolbar button:hover {background-color: var(--colorToolbarButtonHover);}
+.toolbar-mainbar.toolbar-large button:hover,
+.toolbar-extensions .button-toolbar button:hover {
+    background-color: var(--colorToolbarButtonHover);
+}
 /* url and search colours */
-.addressfield,.searchfield {border-color: transparent !important;}/* ignores local variables */
+.addressfield,.searchfield {
+    border-color: transparent !important;/* ignores local variables for some reason */
+}
 /* when focus */
 .addressfield:focus-within,.searchfield:focus-within {
     color: var(--colorUrlFocusFg);
     background: var(--colorUrlFocusBg);
     box-shadow: var(--urlVignette) !important;
 }
-.addressfield:focus-within ::placeholder,.searchfield:focus-within ::placeholder {color: var(--colorUrlFocusFg);}
+.addressfield:focus-within ::placeholder,
+.searchfield:focus-within ::placeholder {
+    color: var(--colorUrlFocusFg);
+}
 .url::selection,.searchfield-input::selection {
     color: var(--colorUrlFocusBg);
     background: var(--colorUrlFocusFg);
@@ -156,7 +188,7 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,.status-info {
 /* url and search buttons */
 .addressfield .button-toolbar,.searchfield .button-toolbar {margin-top: 2.5px;}
 .addressfield [title='sensors'] {margin-top: 1.5px;}
-.addressfield:focus-within .addressfield-siteinfo.internal .siteinfo-symbol svg path{
+.addressfield:focus-within .addressfield-siteinfo.internal .siteinfo-symbol svg path {
     fill: var(--colorUrlFocusFg);
     color: var(--colorUrlFocusFg);
 }
@@ -169,11 +201,18 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,.status-info {
     background: var(--colorHighlightBgDark) !important;
     border-color: var(--colorHighlightBgDark) !important;
 }
-.addressfield .button-toolbar .button-on svg path {fill: var(--colorHighlightBg);}
+.addressfield .button-toolbar .button-on svg path {
+    fill: var(--colorHighlightBg);
+}
 .searchfield .button-toolbar:hover svg path,
-.addressfield .button-toolbar .button-on:hover svg path {fill: var(--colorHighlightFg) !important;}
-.addressfield .button-toolbar button,.searchfield .button-toolbar button {border-radius: var(--rounderRadius) !important;}
-.addressfield .button-toolbar button:hover,.searchfield .button-toolbar button:hover {
+.addressfield .button-toolbar .button-on:hover svg path {
+    fill: var(--colorHighlightFg) !important;
+}
+.addressfield .button-toolbar button,.searchfield .button-toolbar button {
+    border-radius: var(--rounderRadius) !important;
+}
+.addressfield .button-toolbar button:hover,
+.searchfield .button-toolbar button:hover {
     background-color: var(--colorHighlightBgDark);
     border: var(--transparent) !important;
 }
@@ -187,8 +226,13 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,.status-info {
 }
 /* bookmark bar */
 .bookmark-bar-top .toolbar-mainbar:after {display: none;}
-.bookmark-bar,.bookmark-bar .observer button {background-color: var(--colorAccentBg);}
-.color-behind-tabs-on .bookmark-bar,.color-behind-tabs-on .bookmark-bar .observer button {background-color: var(--colorBg);}
+.bookmark-bar,.bookmark-bar .observer button {
+    background-color: var(--colorAccentBg);
+}
+.color-behind-tabs-on .bookmark-bar,
+.color-behind-tabs-on .bookmark-bar .observer button {
+    background-color: var(--colorBg);
+}
 /* finder */
 .find-in-page {justify-content: initial;}
 .fip-input-label {display: none;}
@@ -205,7 +249,9 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,.status-info {
 }
 /* thumbs */
 .speeddial {margin-top: 20px;}
-.startpage-content button.button-title {box-shadow: 0 2px 2px #292929b3 !important;}
+.startpage-content button.button-title {
+    box-shadow: 0 2px 2px #292929b3 !important;
+}
 .startpage-content button.button-title {
     color: var(--colorHighlightFg) !important;
     background-color: var(--colorHighlightBg) !important;
@@ -219,14 +265,24 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,.status-info {
 button.button-startpage:after {display: none;}
 .startpage .startpage-folder-navigation button:hover {filter: brightness(150%);}
 /* bookmarks with no thumbnail */
-.startpage-content .thumbnail .thumbnail-image {background-image: linear-gradient(125deg, var(--colorHighlightBgAlpha) 0%, var(--colorHighlightBgAlpha) 80%);}
-.cb-image svg .bookmark-shadow, .thumbnail-image svg .bookmark-shadow {display: none;}
-.cb-image svg .bookmark-shape, .thumbnail-image svg .bookmark-shape,#sd-bookmark {fill: var(--colorHighlightFg);}
+.startpage-content .thumbnail .thumbnail-image {
+    background-image: linear-gradient(125deg,var(--colorHighlightBgAlpha) 0%,var(--colorHighlightBgAlpha) 80%);
+}
+.cb-image svg .bookmark-shadow,.thumbnail-image svg .bookmark-shadow {
+    display: none;
+}
+.cb-image svg .bookmark-shape,
+.thumbnail-image svg .bookmark-shape,
+#sd-bookmark {
+    fill: var(--colorHighlightFg);
+}
 /* panel */
 #switch {background-color: var(--colorPanelBg);}
 #switch button svg path,#switch button svg rect {fill: var(--colorPanelFg);}
 #switch button.active svg path {fill: inherit;}
-#switch button:not(.active):hover {background-color: var(--colorPanelButtonHoverBgLight);}
+#switch button:not(.active):hover {
+    background-color: var(--colorPanelButtonHoverBgLight);
+}
 .theme-dark #switch button:not(.active):hover,
 .theme-light.acc-dark.color-behind-tabs-on #switch button:not(.active):hover {
     background-color: var(--colorPanelButtonHoverBg) !important;
@@ -239,7 +295,10 @@ button.button-startpage:after {display: none;}
     color: var(--colorHighlightFg);
     background-color: var(--colorHighlightBg) !important;
 }
-.speeddial-bookmarksbar input:focus-within,.speeddial-bookmarksbar input:focus-within:hover {background-color: var(--colorBg);}
+.speeddial-bookmarksbar input:focus-within,
+.speeddial-bookmarksbar input:focus-within:hover {
+    background-color: var(--colorBg);
+}
 .theme-dark .tree-row .audioicon {filter: invert(1);}
 /* status overlay */
 .status-info {
