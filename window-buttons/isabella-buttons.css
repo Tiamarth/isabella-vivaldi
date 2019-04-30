@@ -12,10 +12,10 @@
 /* remove background on window buttons */
 .window-buttongroup button {
     width: 30px !important;
-    background-color: var(--transparent);
+    background-color: var(--transparent) !important;
 }
-.window-buttongroup button:hover {background-color: var(--transparent);}
-.window-buttongroup button:active {background-color: var(--transparent);}
+.window-buttongroup button:hover {background-color: var(--transparent) !important;}
+.window-buttongroup button:active {background-color: var(--transparent) !important;}
 .isblurred #browser .window-buttongroup img {opacity: 0.3;}
 /* hide default window buttons svgs */
 .window-buttongroup svg {display: none;}
