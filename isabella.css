@@ -29,14 +29,12 @@ body {
     --urlVignette: inset 0 0 10px #00000026;
     --colorWindowBorder: var(--colorBg);
     --colorWindowBorderAccentBehindTabs: var(--colorAccentBg);
-    --colorTabHoverBg: #54545454;
-    --colorTabHoverBgLight: #6f6f6f47;
     --colorIndicatorBg: #d2d2d287;
     --colorIndicatorActiveBg: #fff;
     --colorIndicatorBgLight: #00000059;
     --colorIndicatorActiveBgLight: #000;
     --colorIndicatorHoverBg: var(--colorHighlightBg);
-    --colorToolbarButtonHover: var(--colorTabHoverBg);
+    --colorToolbarButtonHover: var(--color);
     --colorUrlFocusFg: var(--colorHighlightFg);
     --colorUrlFocusBg: var(--colorHighlightBg);
     --colorUrlLoadBg: var(--colorFgAlpha);
@@ -104,9 +102,13 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,.vivaldi-settings
       !important;
 }
 /* tab colors */
-.tab:not(.active):hover {background: var(--colorTabHoverBg) !important;}
+.tab:not(.active):hover {background-color: var(--colorBgLighter) !important;}
 .theme-light .tab:not(.active):hover {
-    background: var(--colorTabHoverBgLight) !important;
+    background-color: var(--colorAccentBgDarker) !important;
+}
+.theme-light.acc-dark.color-behind-tabs-on .tab:not(.active):hover {
+    color: var(--colorFg) !important;
+    background-color: var(--colorAccentBgFadedMost) !important;
 }
 #tabs-container .tab.tab-small.audio-on .tab-audio {
     background-color: var(--colorHighlightBg);
@@ -154,7 +156,7 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,.vivaldi-settings
 .addressfield,.searchfield {border-radius: var(--rounderRadius) !important;}
 .toolbar-mainbar.toolbar-large button:hover,
 .toolbar-extensions .button-toolbar button:hover {
-    background-color: var(--colorToolbarButtonHover);
+    background-color: var(--colorToolbarButtonHover) ;
 }
 /* url and search colours */
 .addressfield,.searchfield {
@@ -281,7 +283,7 @@ button.button-startpage:after {display: none;}
 }
 /* panel */
 #switch {background-color: var(--colorAccentBgDark);}
-#switch button svg path,#switch button svg rect {fill: var(--colorAccentFgDark);}
+#switch button svg path,#switch button svg rect {fill: var(--colorAccentFg);}
 #switch button.active svg path {fill: inherit;}
 #switch button:not(.active):hover,
 .theme-dark #switch button:not(.active):hover,
