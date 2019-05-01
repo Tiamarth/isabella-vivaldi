@@ -143,7 +143,7 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,.status-info {
     margin-top: 3px;
 }
 .toolbar.toolbar-tabbar.toolbar-noflex.sync-and-trash-container {
-    margin-right: 15px;
+    margin-right: 20px;
 }
 .newtab.button-toolbar button:hover,
 .synced-tabs-button.button-toolbar button:hover,
