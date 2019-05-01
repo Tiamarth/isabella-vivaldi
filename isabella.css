@@ -40,11 +40,6 @@ body {
     --colorUrlFocusFg: var(--colorHighlightFg);
     --colorUrlFocusBg: var(--colorHighlightBg);
     --colorUrlLoadBg: var(--colorFgAlpha);
-    --colorPanelBg: var(--colorAccentBgDark);
-    --colorPanelFg: var(--colorAccentFg);
-    --colorPanelButtonHoverBg: #29292d;
-    --colorPanelButtonHoverBgLight: #f0f0f0c7;
-    --colorPanelContentBg: #333335;
     --colorFaviconBorder: #8686868c;
     --colorFaviconBorderHibernated: #c7c7c782;
     /* values that overwrite vivaldi default values */
@@ -285,15 +280,13 @@ button.button-startpage:after {display: none;}
     fill: var(--colorHighlightFg);
 }
 /* panel */
-#switch {background-color: var(--colorPanelBg);}
-#switch button svg path,#switch button svg rect {fill: var(--colorPanelFg);}
+#switch {background-color: var(--colorAccentBgDark);}
+#switch button svg path,#switch button svg rect {fill: var(--colorAccentFgDark);}
 #switch button.active svg path {fill: inherit;}
-#switch button:not(.active):hover {
-    background-color: var(--colorPanelButtonHoverBgLight);
-}
+#switch button:not(.active):hover,
 .theme-dark #switch button:not(.active):hover,
 .theme-light.acc-dark.color-behind-tabs-on #switch button:not(.active):hover {
-    background-color: var(--colorPanelButtonHoverBg) !important;
+    background-color: var(--colorAccentBgFaded);
 }
 /* panel content */
 .panel-group input:focus-within,
