@@ -216,6 +216,10 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,.status-info {
     background-color: var(--colorHighlightBgDark);
     border: var(--transparent) !important;
 }
+.addressfield .button-toolbar button:hover svg path,
+.searchfield .button-toolbar button:hover svg path {
+    fill: var(--colorHighlightFg);
+}
 .searchfield:focus-within .button-toolbar svg path,
 .addressfield:focus-within .button-toolbar svg path {
     fill: var(--colorHighlightFg) !important;
@@ -257,10 +261,14 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,.status-info {
     background-color: var(--colorHighlightBg) !important;
 }
 /* back button */
+.startpage .startpage-folder-navigation {margin-top: -20px;}
 .startpage .startpage-folder-navigation button,
 .startpage .startpage-folder-navigation button:hover {
     color: var(--colorHighlightFg);
     background-color: var(--colorHighlightBg);
+}
+.startpage .startpage-folder-navigation button svg {
+    fill: var(--colorHighlightFg);
 }
 button.button-startpage:after {display: none;}
 .startpage .startpage-folder-navigation button:hover {filter: brightness(150%);}
