@@ -34,7 +34,6 @@ body {
     --colorIndicatorBgLight: #00000059;
     --colorIndicatorActiveBgLight: #000;
     --colorIndicatorHoverBg: var(--colorHighlightBg);
-    --colorToolbarButtonHover: var(--color);
     --colorUrlFocusFg: var(--colorHighlightFg);
     --colorUrlFocusBg: var(--colorHighlightBg);
     --colorUrlLoadBg: var(--colorFgAlpha);
@@ -61,7 +60,8 @@ body {
 /* ~ animations ~ */
 /* can't transition vivaldi icon for some reason */
 /* .vivaldi-v svg path, */
-button,input,textarea,svg,path,.tab,.addressfield,.searchfield,.vivaldi-settings .settings-sidebar .button-category,.status-info {
+button,input,textarea,svg,path,.tab,.addressfield,.searchfield,
+.vivaldi-settings .settings-sidebar .button-category,.status-info {
     transition: var(--animated) !important;
     transition-delay: var(--animatedUntil) !important;
 }
@@ -156,7 +156,7 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,.vivaldi-settings
 .addressfield,.searchfield {border-radius: var(--rounderRadius) !important;}
 .toolbar-mainbar.toolbar-large button:hover,
 .toolbar-extensions .button-toolbar button:hover {
-    background-color: var(--colorToolbarButtonHover) ;
+    background-color: var(--colorBorderIntense) !important;
 }
 /* url and search colours */
 .addressfield,.searchfield {
@@ -286,8 +286,7 @@ button.button-startpage:after {display: none;}
 #switch button svg path,#switch button svg rect {fill: var(--colorAccentFg);}
 #switch button.active svg path {fill: inherit;}
 #switch button:not(.active):hover,
-.theme-dark #switch button:not(.active):hover,
-.theme-light.acc-dark.color-behind-tabs-on #switch button:not(.active):hover {
+#switch .addwebpanel-wrapper button.addwebpanel:hover {
     background-color: var(--colorAccentBgFaded);
 }
 /* panel content */
@@ -309,7 +308,9 @@ button.button-startpage:after {display: none;}
     color: var(--colorHighlightFg);
     background-color: var(--colorHighlightBg);
 }
-.vivaldi-settings .settings-sidebar .button-category:hover {background-color: var(--colorBgLightIntense);}
+.vivaldi-settings .settings-sidebar .button-category:hover {
+    background-color: var(--colorBgLightIntense);
+}
 .vivaldi-settings .settings-sidebar .button-category.category-selected {
     color: var(--colorFg);
     fill: var(--colorFg);
