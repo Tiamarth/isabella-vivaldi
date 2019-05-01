@@ -50,13 +50,5 @@ sed -i 's/  <\/head>/\n<link rel="stylesheet" href="style\/isabella.css" \/>\n  
 
 Also, you can use the Adwaita window buttons instead if you copy the `adwaita-buttons` folder and `adwaita-buttons.css` instead of the Isabella buttons.
 
-### Todo
-&#9744; sidebar  
-&#9744; scrollbars  
-&#9744; status bar  
-&#9744; side and bottom tabs  
-&#9744; settings menu  
-&#9744; more animations  
-
 ### Known issues
 - the internal siteinfo button in the addressfield is transitioned inconsistently with the rest of the interface
