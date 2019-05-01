@@ -68,7 +68,7 @@ body {
 /* ~ animations ~ */
 /* can't transition vivaldi icon for some reason */
 /* .vivaldi-v svg path, */
-button,input,textarea,svg,path,.tab,.addressfield,.searchfield,.status-info {
+button,input,textarea,svg,path,.tab,.addressfield,.searchfield,.vivaldi-settings .settings-sidebar .button-category,.status-info {
     transition: var(--animated) !important;
     transition-delay: var(--animatedUntil) !important;
 }
@@ -308,6 +308,18 @@ button.button-startpage:after {display: none;}
     background-color: var(--colorBg);
 }
 .theme-dark .tree-row .audioicon {filter: invert(1);}
+/* settings menu */
+.vivaldi-settings .settings-sidebar {box-shadow: initial;}
+.vivaldi-settings .settings-sidebar .settings-navigation-header .settings-search:focus-within {
+    color: var(--colorHighlightFg);
+    background-color: var(--colorHighlightBg);
+}
+.vivaldi-settings .settings-sidebar .button-category:hover {background-color: var(--colorBgLightIntense);}
+.vivaldi-settings .settings-sidebar .button-category.category-selected {
+    color: var(--colorFg);
+    fill: var(--colorFg);
+    border: initial;
+}
 /* status overlay */
 .status-info {
     color: var(--colorHighlightFg) !important;
