@@ -39,6 +39,9 @@ mv window-buttons/isabella-buttons.css /opt/vivaldi/resources/vivaldi/style/
 mv window-buttons/isabella-buttons /opt/vivaldi/resources/vivaldi/style/
 sed -i 's/  <\/head>/    <link rel="stylesheet" href="style\/isabella.css" \/>\n  <\/head>/' "/opt/vivaldi/resources/vivaldi/browser.html"
 ```
+
+**Note:** I use Vivaldi's snapshot cycle, so that's the version that this skin is being written on. It work just as well on the stable version but please let me know if you encounter any issues.
+
 **Vivaldi Snapshot**
 ```bash
 git clone https://github.com/isabella-theme/isabella-vivaldi.git && cd isabella-vivaldi
