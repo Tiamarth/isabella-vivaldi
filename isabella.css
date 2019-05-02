@@ -57,11 +57,16 @@ body {
 .tabs-top.mac.color-behind-tabs-on #tabs-container {
     background-image: none;
 }
-/* ~ animations ~ */
+/* animations */
+/* i declared these here to reduce repetitive code but i think it might be
+ * better to split them up properly
+ * but i'm also too lazy to do that
+ */
 /* can't transition vivaldi icon for some reason */
 /* .vivaldi-v svg path, */
 button,input,textarea,svg,path,.tab,.addressfield,.searchfield,
-.vivaldi-settings .settings-sidebar .button-category,.status-info {
+.draggable.dial.folder,.vivaldi-settings .settings-sidebar .button-category,
+.status-info {
     transition: var(--animated) !important;
     transition-delay: var(--animatedUntil) !important;
 }
@@ -257,6 +262,10 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,
     color: var(--colorHighlightFg) !important;
     background-color: var(--colorHighlightBg) !important;
 }
+.cb-image svg .folder-tab-color,.thumbnail-image svg .folder-tab-color {
+    fill: transparent;
+}
+.dials .dial .preview {padding: 0;}
 /* back button */
 .startpage .startpage-folder-navigation {margin-top: -20px;}
 .startpage .startpage-folder-navigation button,
@@ -269,18 +278,18 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,
 }
 button.button-startpage:after {display: none;}
 .startpage .startpage-folder-navigation button:hover {filter: brightness(150%);}
-/* bookmarks with no thumbnail */
+/* speed dial items with no thumbnail */
 .startpage-content .thumbnail .thumbnail-image {
-    background-image: linear-gradient(125deg,var(--colorHighlightBgAlpha) 0%,var(--colorHighlightBgAlpha) 80%);
+    background-image: initial;
+    background-color: transparent;
 }
+.thumbnail-image.dial-folder-icon {box-shadow: initial !important;}
 .cb-image svg .bookmark-shadow,.thumbnail-image svg .bookmark-shadow {
     display: none;
 }
 .cb-image svg .bookmark-shape,
 .thumbnail-image svg .bookmark-shape,
-#sd-bookmark {
-    fill: var(--colorHighlightFg);
-}
+#sd-bookmark {fill: var(--colorHighlightFg);}
 /* panel */
 #switch {background-color: var(--colorAccentBgDark);}
 #switch button svg path,#switch button svg rect {fill: var(--colorAccentFg);}
