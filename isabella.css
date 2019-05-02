@@ -65,7 +65,7 @@ body {
 /* can't transition vivaldi icon for some reason */
 /* .vivaldi-v svg path, */
 button,input,textarea,svg,path,.tab,.addressfield,.searchfield,
-.draggable.dial.folder,.vivaldi-settings .settings-sidebar .button-category,
+.vivaldi-settings .settings-sidebar .button-category,
 .status-info {
     transition: var(--animated) !important;
     transition-delay: var(--animatedUntil) !important;
