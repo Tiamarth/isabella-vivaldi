@@ -1,6 +1,4 @@
 # Isabella for Vivaldi custom css
-![vivaldi screenshot](https://i.imgur.com/ASoZP30.png)
-
 ## Features
 - **improve interface animation transitions** By default Vivaldi's animations throughout its interface are pretty inconsistent, some elements just jerk awkwardly between states because they aren't animated at all. Isabella adds smooth transitions to several elements that previously had none.
 - **buttons in the tab bar are arranged more consistently** By default, Vivaldi places the window buttons in the far top right of the window, but places all the other buttons in the header just above the address bar. Isabella repositions all the buttons at the top of the window so that they're all vertically centered.
@@ -54,6 +52,13 @@ sed -i 's/  <\/head>/\n<link rel="stylesheet" href="style\/isabella.css" \/>\n  
 Also, you can use the Adwaita window buttons instead if you copy the `adwaita-buttons` folder and `adwaita-buttons.css` instead of the Isabella buttons.
 
 **Note:** I use Vivaldi's snapshot cycle, so that's the version that this skin is being written on. It should work just as well on the stable version but please let me know if you encounter any issues.
+
+## Screenshots
+Vivaldi with Isabella's css applied:
+![vivaldi with isabella css screenshot](https://cdn.discordapp.com/attachments/184366948467998720/573965350501089280/unknown.png)
+
+Vivaldi with default css:
+![vivaldi with default css screenshot](https://cdn.discordapp.com/attachments/184366948467998720/573965902488272898/unknown.png)
 
 ### Known issues
 - the internal siteinfo button in the addressfield is transitioned inconsistently with the rest of the interface
