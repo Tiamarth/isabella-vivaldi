@@ -240,11 +240,32 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,
     background-color: var(--colorBg);
 }
 /* finder */
-.find-in-page {justify-content: initial;}
-.fip-input-label {display: none;}
+.find-in-page {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    max-width: 100%;
+    justify-content: initial;
+    background-color: var(--colorBgAlphaHeavy);
+    border-left: 1px solid var(--colorBorder);
+}
+.find-in-page span.fip-input-label {display: none;}
+.find-in-page:before {
+    content: 'Find:';
+    color: var(--colorFg);
+    padding: 0 5px 4px 0;
+
+}
+.find-in-page .fip-input-container input {
+    background-color: var(--colorBgAlphaHeavy);
+}
+.find-in-page .toolbar.toolbar-group button,
+.find-in-page .button-toolbar button {
+    background: var(--colorBgAlphaHeavy);
+}
 .find-in-page .fip-input-container input:focus-within {
     color: var(--colorHighlightFg);
-    background-color: var(--colorHighlightBg);
+    background-color: var(--colorHighlightBgAlpha);
 }
 /* speed dial */
 /* navigation */
