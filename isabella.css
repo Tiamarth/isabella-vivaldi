@@ -19,7 +19,7 @@ body {
     --windowBorderMaximized: initial;
     --fullscreenTitlebar: none;
     --rounderRadius: 10px;
-    --animated: 0.2s ease-in-out;
+    --animated: 0.2s cubic-bezier(0.47, 0, 0.75, 0.72);
     --animatedNot: 0s;
     --animatedUntil: 0s;
     --white: #fff;
@@ -70,6 +70,8 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,
     transition: var(--animated) !important;
     transition-delay: var(--animatedUntil) !important;
 }
+/* 0.2s on the new tab button feels too slow for some reason */
+.newtab * {transition-duration: 0.1s !important;}
 /* don't animate if user disables in settings */
 #browser.animation-off {transition: var(--animatedNot);}
 /* ~ tabs ~ */
@@ -119,12 +121,18 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,
 }
 /* tab colors */
 .tab:not(.active):hover {background-color: var(--colorBgLighter) !important;}
+.tab:not(.active):hover .tab-header {color: var(--colorFgIntense);}
 .theme-light .tab:not(.active):hover {
     background-color: var(--colorAccentBgDarker) !important;
 }
-.theme-light.acc-dark.color-behind-tabs-on .tab:not(.active):hover {
-    color: var(--colorFg) !important;
+.theme-light .tab:not(.active):hover .tab-header {
+    color: var(--colorFgIntense);
+}
+.acc-dark.color-behind-tabs-on .tab:not(.active):hover {
     background-color: var(--colorAccentBgFadedMost) !important;
+}
+.acc-dark.color-behind-tabs-on .tab:not(.active):hover .tab-header {
+    color: var(--colorAccentFg);
 }
 #tabs-container .tab.tab-small.audio-on .tab-audio {
     background-color: var(--colorHighlightBg);
@@ -284,6 +292,10 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,
 .active.button-startpage {
     color: var(--colorHighlightFg) !important;
     background-color: var(--colorHighlightBg);
+}
+.sd-title-editor {height: 32px !important;}
+.startpage .startpage-navigation .startpage-navigation-group:last-of-type {
+    border-left: initial;
 }
 /* thumbs */
 .speeddial {margin-top: 20px;}
