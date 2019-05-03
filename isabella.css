@@ -287,6 +287,7 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,
     fill: transparent;
 }
 .dials .dial .preview {padding: 0;}
+.dials .dial .preview .thumbnail-image {box-shadow: initial;}
 /* back button */
 .startpage .startpage-folder-navigation {margin-top: -20px;}
 .startpage .startpage-folder-navigation button,
