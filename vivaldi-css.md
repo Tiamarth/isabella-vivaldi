@@ -4,6 +4,8 @@
 ## Features
 - **improve interface animation transitions** By default Vivaldi's animations throughout its interface are pretty inconsistent, some elements just jerk awkwardly between states because they aren't animated at all. Isabella adds smooth transitions to several elements that previously had none.
 - **buttons in the tab bar are arranged more consistently** By default, Vivaldi places the window buttons in the far top right of the window, but places all the other buttons in the header just above the address bar. Isabella repositions all the buttons at the top of the window so that they're all vertically centered.
+- **"metro" speed dial folders** Isabella makes the speed dial look more modern by disabling the default folder backgrounds and displaying only the thumbnails of the bookmarks contained in the folder.
+- **overlay find in page** Isabella makes the find in page not disrupt the flow of content by overlaying it over the page instead of shifting everything out of the way.
 - **force window border around content** Default Vivaldi doesn't have a window border unless you enable native window decorations in the settings, but this makes it occasionally difficult to differentiate the Vivaldi window from other applications when the page content is a similar color as background apps. Isabella forces a window border even when native window is disabled.
 - **more clear tab hovered** When you're moving your mouse over the tabs in the tab bar, Isabella emphasizes the tab that's currently being hovered far more clearly than Vivaldi does by default. 
 - **more visible tab stack indicators** Tab stack indicators are easier to see, the topmost tab in a tab stack is easier to distinguish from the others. This is done without requiring more space for the indicators.
@@ -40,8 +42,6 @@ mv window-buttons/isabella-buttons /opt/vivaldi/resources/vivaldi/style/
 sed -i 's/  <\/head>/    <link rel="stylesheet" href="style\/isabella.css" \/>\n  <\/head>/' "/opt/vivaldi/resources/vivaldi/browser.html"
 ```
 
-**Note:** I use Vivaldi's snapshot cycle, so that's the version that this skin is being written on. It work just as well on the stable version but please let me know if you encounter any issues.
-
 **Vivaldi Snapshot**
 ```bash
 git clone https://github.com/isabella-theme/isabella-vivaldi.git && cd isabella-vivaldi
@@ -52,6 +52,8 @@ sed -i 's/  <\/head>/\n<link rel="stylesheet" href="style\/isabella.css" \/>\n  
 ```
 
 Also, you can use the Adwaita window buttons instead if you copy the `adwaita-buttons` folder and `adwaita-buttons.css` instead of the Isabella buttons.
+
+**Note:** I use Vivaldi's snapshot cycle, so that's the version that this skin is being written on. It should work just as well on the stable version but please let me know if you encounter any issues.
 
 ### Known issues
 - the internal siteinfo button in the addressfield is transitioned inconsistently with the rest of the interface
