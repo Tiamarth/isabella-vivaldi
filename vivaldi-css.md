@@ -1,4 +1,6 @@
 # Isabella for Vivaldi custom css
+![screenshot](https://isabella-theme.github.io/assets/img/isabella-vivaldi/preview.png)
+
 I'm writing this css to fix some issues I have with Vivaldi's default interface *and* to force it to integrate better with gtk apps, specifically using Epiphany as a reference. I'm not the only Vivaldi user who wants the ui to be more respectful of system themes and appearances, but I'm unaware of other projects to actually solve the issue. Vivaldi is one of only a few apps I have installed that seems utterly disinterested to integrate with my system, and it's the *only* web browser I know of that doesn't integrate.
 
 Vivaldi's "enable native window" is *not* a solution.
@@ -66,13 +68,6 @@ sed -i 's/  <\/head>/\n<link rel="stylesheet" href="style\/isabella.css" \/>\n  
 Also, you can use the Adwaita window buttons instead if you copy the `adwaita-buttons` folder and `adwaita-buttons.css` instead of the Isabella buttons.
 
 **Note:** I use Vivaldi's snapshot cycle, so that's the version that this skin is being written on. It should work just as well on the stable version but please let me know if you encounter any issues.
-
-## Screenshots
-Vivaldi with Isabella's css applied:
-![vivaldi with isabella css screenshot](https://cdn.discordapp.com/attachments/184366948467998720/573965350501089280/unknown.png)
-
-Vivaldi with default css:
-![vivaldi with default css screenshot](https://cdn.discordapp.com/attachments/184366948467998720/573965902488272898/unknown.png)
 
 ### Known issues
 - the internal siteinfo button in the addressfield is transitioned inconsistently with the rest of the interface
