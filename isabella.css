@@ -180,7 +180,7 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,
 .addressfield,.searchfield {border-radius: var(--rounderRadius) !important;}
 .toolbar-mainbar.toolbar-large button:hover,
 .toolbar-extensions .button-toolbar button:hover {
-    background-color: var(--colorBorderIntense) !important;
+    background-color: var(--colorBorderIntense);
 }
 /* url and search colours */
 .addressfield,.searchfield {
@@ -223,7 +223,7 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,
     border-color: var(--colorHighlightBgDark) !important;
 }
 .addressfield .button-toolbar .button-on svg path {
-    fill: var(--colorHighlightBg);
+    fill: var(--colorHighlightBg) !important;
 }
 .searchfield .button-toolbar:hover svg path,
 .addressfield .button-toolbar .button-on:hover svg path {
@@ -232,9 +232,8 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,
 .addressfield .button-toolbar button,.searchfield .button-toolbar button {
     border-radius: var(--rounderRadius) !important;
 }
-.addressfield .button-toolbar button:hover,
-.searchfield .button-toolbar button:hover {
-    background-color: var(--colorHighlightBgDark);
+.addressfield button:hover,.searchfield button:hover {
+    background-color: var(--colorHighlightBgDark) !important;
     border: var(--transparent) !important;
 }
 .addressfield .button-toolbar button:hover svg path,
