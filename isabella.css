@@ -76,28 +76,28 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,
 #browser.animation-off {transition: var(--animatedNot);}
 /* ~ tabs ~ */
 /* adjust spacing to better resemble epiphany */
-#header {height: 42px;}
+#header {min-height: 42px;}
 .vivaldi-v {margin-top: 5px;}
+.topmenu {padding-bottom: 5px;}
 #tabs-container {
     padding-top: 5px !important;
     padding-bottom: 5px !important;
 }
-.tab-strip {height: 37px;}
+.tab-strip {min-height: 37px;}
 .tab-header {margin-top: 4px;}
-.topmenu {padding-bottom: 5px;}
 /* if tab spacing in maximized windows is disabled */
-#browser.tabs-at-edge #header {height: 37px;}
+#browser.tabs-at-edge #header {min-height: 37px;}
 #browser.tabs-at-edge .vivaldi-v {margin-top: 5px;}
-#browser.tabs-at-edge #tabs-container {
-    padding-top: 0 !important;
-    padd
-}
+#browser.tabs-at-edge #tabs-container {padding-top: 0 !important;}
 /* if horizontal menu is enabled */
-#browser.horizontal-menu #header {height: 76px;}
+#browser.horizontal-menu #header {min-height: 76px;}
 /* if horizontal menu is enabled and tab spacing is disabled */
-#browser.horizontal-menu.tabs-at-edge #header {height: 71px;}
+#browser.horizontal-menu.tabs-at-edge #header {min-height: 71px;}
+/* if tab thumbnails are enabled */
+#tabs-container.view-thumbs {padding-bottom: 0 !important;}
+#tabs-container.view-thumbs .thumbnail-image {margin-top: 3px;}
 /* if tabs are moved or disabled */
-#browser:not(.tabs-top) #header {height: 30px;}
+#browser:not(.tabs-top) #header {min-height: 30px;}
 /* compensate for dark favicons on dark themes */
 .tab.isdiscarded .tab-header {
     opacity: var(--tabHeaderOpacityHibernated) !important;
