@@ -173,6 +173,37 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,
     transition: var(--animated);
     transition-delay: var(--animatedUntil);
 }
+/* horizontal scrolling tabs */
+/* this only kind of works
+ * tabs that scroll horizontally instead of becoming tiny boxes with
+ * no discerning features is my preferred functionality so if i'm
+ * ever able to get this working perfectly i'll merge this with master
+ * 
+ */
+#tabs-container {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    margin-left: 40px;
+    max-width: 83% !important;
+}
+#tabs-container::-webkit-scrollbar {display: none;}
+#tabs-container.top .tab-strip {display: flex !important;}
+#tabs-container.top .tab-position {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    min-width: 70px;
+}
+.tab-position .tab-header .title {min-width: 70px;}
+#tabs-container .newtab {
+    position: absolute !important;
+    left: auto !important;
+    z-index: 9 !important;
+}
+#tabs-container .sync-and-trash-container {
+    position: absolute;
+    right: 80px;
+}
 /* ~ address bar ~ */
 /* adjust spacing to better resemble epiphany */
 .toolbar-mainbar {height: 32px;}
