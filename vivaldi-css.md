@@ -6,7 +6,7 @@ I'm writing this css to fix some issues I have with Vivaldi's default interface 
 Vivaldi's "enable native window" is *not* a solution.
 
 ## Features
-- **buttons in the tab bar are arranged more consistently** By default, Vivaldi places the window buttons in the far top right of the window, but places all the other buttons in the header just above the address bar. Isabella repositions all the buttons at the top of the window so that they're all vertically centered. In the following screenshot, the top bar is default Vivaldi using the default "Dark" theme, and the bottom bar is Isabella using the "Isabella" theme.
+- **buttons in the tab bar are arranged more consistently** By default, Vivaldi places the window buttons in the far top right of the window, but places all the other buttons in the header just above the address bar. Isabella repositions all the buttons at the top of the window so that they're all vertically centered. In the following screenshot, the top bar is default Vivaldi and the bottom bar is Isabella.
 
 ![screenshot of "buttons in the tab bar are arranged more consistently"](https://isabella-theme.github.io/assets/img/isabella-vivaldi/buttons_tab_bar.png)
 
@@ -30,7 +30,7 @@ Vivaldi's "enable native window" is *not* a solution.
 
 ![screenshot of "more visible tab stack indicators"](https://isabella-theme.github.io/assets/img/isabella-vivaldi/stack_indicators.png)
 
-- **no top gradient** By default, Vivaldi draws a gradient behind the tabs if various criteria are met by the currently applied theme. In particular if the accent is dark and applied to the window. Admittedly, in most themes the gradient is very subtle and probably doesn't bother most users, but it did bother me so Isabella removes the gradient. In the following screenshot, the top bar is default Vivaldi using the default "Subtle" theme, and the bottom bar is Isabella using the default "Subtle" theme.
+- **no top gradient** By default, Vivaldi draws a gradient behind the tabs if various criteria are met by the currently applied theme. In particular if the accent is dark and applied to the window. Admittedly, in most themes the gradient is very subtle and probably doesn't bother most users, but it did bother me so Isabella removes the gradient. In the following screenshot, the top bar is default Vivaldi and the bottom bar is Isabella.
 
 ![screenshot of "no top gradient"](https://isabella-theme.github.io/assets/img/isabella-vivaldi/no_top_gradient.png)
 
