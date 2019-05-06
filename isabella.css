@@ -186,8 +186,9 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,
 #browser:is(.tabs-bottom) #tabs-container {
     overflow-y: hidden;
     overflow-x: scroll;
-    margin-left: 40px;
-    max-width: 83% !important;
+    margin-right: 90px;
+    margin-left: 35px;
+    padding-left: 0px !important;
 }
 
 #browser:is(.tabs-top) #tabs-container::-webkit-scrollbar,
@@ -195,16 +196,16 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,
     display: none;
 }
 
-#browser:is(.tabs-top) #tabs-container .tab-strip,
-#browser:is(.tabs-bottom) #tabs-container .tab-strip {
+#browser:is(.tabs-top) #tabs-container.top .tab-strip,
+#browser:is(.tabs-bottom) #tabs-container.top .tab-strip {
     display: flex !important;
 }
 
-#browser:is(.tabs-top) #tabs-container .tab-position,
-#browser:is(.tabs-bottom) #tabs-container .tab-position {
+#browser:is(.tabs-top) #tabs-container.top .tab-position,
+#browser:is(.tabs-bottom) #tabs-container.top .tab-position {
     position: relative !important;
-    left: auto !important;
-    top: auto !important;
+    left: 0 !important;
+    top: 0 !important;
     min-width: 70px;
 }
 
@@ -215,16 +216,14 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,
 
 #browser:is(.tabs-top) #tabs-container .newtab,
 #browser:is(.tabs-bottom) #tabs-container .newtab {
-    position: absolute !important;
-    left: auto !important;
-    z-index: 9 !important;
+    padding-left: 70px;
 }
 
 #browser:is(.tabs-top) #tabs-container .sync-and-trash-container,
 #browser:is(.tabs-bottom) #tabs-container .sync-and-trash-container {
-    position: absolute;
-    right: 100px;
+    padding-left: 40px;
 }
+
 /* ~ address bar ~ */
 /* adjust spacing to better resemble epiphany */
 .toolbar-mainbar {height: 32px;}
