@@ -182,39 +182,48 @@ button,input,textarea,svg,path,.tab,.addressfield,.searchfield,
  * for now this is probably the best we'll get with just css
  * 
  */
-#tab-container:is(.top, .bottom) {
+#browser:is(.tabs-top) #tabs-container,
+#browser:is(.tabs-bottom) #tabs-container {
     overflow-y: hidden;
     overflow-x: scroll;
-    margin-right: 90px;
-    margin-left: 35px;
-    padding-left: 0px !important;
+    margin-left: 40px;
+    max-width: 83% !important;
 }
 
-#tab-container:is(.top, .bottom)::-webkit-scrollbar {
+#browser:is(.tabs-top) #tabs-container::-webkit-scrollbar,
+#browser:is(.tabs-bottom) #tabs-container::-webkit-scrollbar {
     display: none;
 }
 
-#tab-container:is(.top, .bottom).top .tab-strip {
+#browser:is(.tabs-top) #tabs-container .tab-strip,
+#browser:is(.tabs-bottom) #tabs-container .tab-strip {
     display: flex !important;
 }
 
-#tab-container:is(.top, .bottom).top .tab-position {
+#browser:is(.tabs-top) #tabs-container .tab-position,
+#browser:is(.tabs-bottom) #tabs-container .tab-position {
     position: relative !important;
-    left: 0 !important;
-    top: 0 !important;
+    left: auto !important;
+    top: auto !important;
     min-width: 70px;
 }
 
-.tab-position .tab-header .title {
+#browser:is(.tabs-top) .tab-position .tab-header .title,
+#browser:is(.tabs-bottom) .tab-position .tab-header .title {
     min-width: 70px;
 }
 
-#tab-container:is(.top, .bottom) .newtab {
-    padding-left: 70px;
+#browser:is(.tabs-top) #tabs-container .newtab,
+#browser:is(.tabs-bottom) #tabs-container .newtab {
+    position: absolute !important;
+    left: auto !important;
+    z-index: 9 !important;
 }
 
-#tab-container:is(.top, .bottom) .sync-and-trash-container {
-    padding-left: 40px;
+#browser:is(.tabs-top) #tabs-container .sync-and-trash-container,
+#browser:is(.tabs-bottom) #tabs-container .sync-and-trash-container {
+    position: absolute;
+    right: 100px;
 }
 /* ~ address bar ~ */
 /* adjust spacing to better resemble epiphany */
