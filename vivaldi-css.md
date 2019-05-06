@@ -3,7 +3,9 @@
 
 I'm writing this css to fix some issues I have with Vivaldi's default interface *and* to force it to integrate better with gtk apps, specifically using Epiphany as a reference. I'm not the only Vivaldi user who wants the ui to be more respectful of system themes and appearances, but I'm unaware of other projects to actually solve the issue. Vivaldi is one of only a few apps I have installed that seems utterly disinterested to integrate with my system, and it's the *only* web browser I know of that doesn't integrate.
 
-Vivaldi's "enable native window" is *not* a solution.
+Vivaldi's "enable native window" is *not* a valid solution or workaround. An application that has native window decorations but completely disregards the system appearance in every other way is not *really* integrated with the system because there's more to the system's appearance than just the title bar and window borders. Moreover "enable native window" takes up a lot of precious vertical space that I'd personally rather keep clear.
+
+[skip to install instructions](https://github.com/isabella-theme/isabella-vivaldi/blob/master/vivaldi-css.md#installation)
 
 ## Features
 - **buttons in the tab bar are arranged more consistently** By default, Vivaldi places the window buttons in the far top right of the window, but places all the other buttons in the header just above the address bar. Isabella repositions all the buttons at the top of the window so that they're all vertically centered. In the following screenshot, the top bar is default Vivaldi and the bottom bar is Isabella.
@@ -38,7 +40,7 @@ Vivaldi's "enable native window" is *not* a solution.
 
 ![gif of "completely adaptable"](https://github.com/isabella-theme/isabella-theme.github.io/blob/master/assets/img/isabella-vivaldi/adaptable.gif)
 
-- **make Vivaldi respect your system theme** Isabella integrates with the Isabella gtk theme, or with Adwaita, by forcing Vivaldi to use those window buttons instead.
+- **make Vivaldi respect your system theme** Isabella integrates with the Isabella gtk theme, or with Adwaita, by forcing Vivaldi to use those window buttons instead. (Because Isabella gtk and Arc gtk currently use the same window buttons, this also technically integrates with Arc. Just apply the Arc colors in Vivaldi's theme settings.)
 
 ![screenshot of "make Vivaldi respect your system theme"](https://isabella-theme.github.io/assets/img/isabella-vivaldi/respect_theme.png)
 
